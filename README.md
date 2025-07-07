@@ -1,8 +1,9 @@
 # CubeSat MTU
+This project is the results of the work of five different interns, 3 in 2023 and 2 in 2025.
 
-This project is divided into two distinct stages. The first stage involved constructing a CubeSat using the information provided for the AMSAT CubeSatSim prototype, available at [CubeSatSim repository](https://github.com/alanbjohnston/CubeSatSim.git). We followed the steps outlined and replicated the foundation.
-
-The second stage focused on enhancing the CubeSat in various ways to address a specific problem. In our case, we selected two distinct improvements. 
+This project is divided into different stages. 
+The first stage involved constructing a CubeSat using the information provided for the AMSAT CubeSatSim prototype, available at [CubeSatSim repository](https://github.com/alanbjohnston/CubeSatSim.git). We followed the steps outlined and replicated the foundation.
+The second stage focused on enhancing the CubeSat in various ways to address a specific problem. 
 
 1. **Real-time Visualization of CubeSat in Space using Gyroscope:**
    We developed a 3D visualization of our CubeSat in real-time on a website. This visualization updates dynamically as the ground station receives information.
@@ -32,8 +33,10 @@ Please refer to individual folders for specific details and resources related to
 The commented sections in the 'soft' directory serve as aids for understanding the base code and should not be modified. They are solely intended to facilitate comprehension.
 
 ## Contributors
-
+- CASTELLANO Amélie 
+- ENAULT Fanny 
 - HUGUET Yann(https://github.com/Yannouille29)
 - JOURDAN Thomas (https://github.com/JourdanThomas)
+- CHETOUANE M'hamed
 
 Feel free to reach out to us for any inquiries or clarifications regarding this project.
