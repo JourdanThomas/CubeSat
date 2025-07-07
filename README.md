@@ -10,6 +10,9 @@ The second stage focused on enhancing the CubeSat in various ways to address a s
 2. **Prototyping CubeSat Maneuverability using Reaction Wheels:**
    We restructured the CubeSat to accommodate two motors and new electronic circuit components. This enhancement allows the CubeSat to orient itself in space based on reaction wheel principles.
 
+3. **Decoding multiple CubeSats at the same time :**
+   
+
 For each of these separate projects, you'll find dedicated folders containing all the necessary information. Additionally, we undertook a thorough analysis of the base code available for CubeSatSim to interact effectively with our enhancements. We've added comments to certain sections of code in the 'soft' directory for the purpose of understanding. It's important to note that these commented code sections have not been altered; they serve merely as tools for comprehension.
 
 ## Folder Structure
