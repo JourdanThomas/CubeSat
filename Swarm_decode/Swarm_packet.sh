@@ -1,7 +1,10 @@
 #!/bin/bash
-
+#######################################################
+# MTU            Swarm_packet.sh
 # script to auto decode packet using rtl_fm and Direwolf
-
+#made by Thomas Jourdan
+#
+#######################################################
 #creating the log folder
 mkdir -p /home/pi/CubeSatSim/groundstation/MTU_swarm_logs
 #deleting old log files
@@ -9,36 +12,24 @@ rm -f /home/pi/CubeSatSim/groundstation/MTU_swarm_logs/device*
 
 set -x
 
+echo
+echo "MTU Nimbus SWARM DECODE"
+echo "V1.11"
 
 #Stopping all processes that might use the devices
 sudo modprobe snd-aloop
-
 sudo systemctl stop openwebrx
-
 sudo systemctl stop rtl_tcp
-
 pkill -o chromium &>/dev/null
-
 sudo killall -9 rtl_fm &>/dev/null
-
 sudo killall -9 direwolf &>/dev/null
-
 sudo killall -9 aplay &>/dev/null
-
 sudo killall -9 qsstv &>/dev/null
-
 sudo killall -9 rtl_tcp &>/dev/null
-
 sudo killall -9 java &>/dev/null
-
 sudo killall -9 CubicSDR &>/dev/null
-
 sudo killall -9 zenity &>/dev/null
 
-echo
-echo "MTU Nimbus SWARM DECODE"
-echo "made by Thomas Jourdan"
-echo "V1.8"
 #######################################################
 # Ask user for decoding mode
 #######################################################
@@ -92,15 +83,42 @@ echo
 
 
 #######################################################
-# Create separate Direwolf config files for each device
+# Ask user if they want to transmit
+#######################################################
+transmit=$(zenity --question --text="Do you want to transmit data to the network?" --ok-label="Yes" --cancel-label="No"; echo $?)
+
+if [[ "$transmit" -eq 0 ]]; then
+  host_ip=$(zenity --entry --title="Host IP" --text="Enter the host IP address to transmit to (or 0 to keep last):" 2>/dev/null)
+  
+  if [[ -z "$host_ip" ]]; then
+    echo "No IP entered. Transmission disabled."
+  elif [[ "$host_ip" == "0" ]]; then
+    if [[ -f /home/pi/CubeSatSim/groundstation/tx_host.txt ]]; then
+      echo "Keeping previous IP: $(cat /home/pi/CubeSatSim/groundstation/MTU_swarm_logs/host_ip.txt)"
+    else
+      echo "No previous IP found. Transmission disabled."
+      exit 1
+    fi
+  else
+    echo "$host_ip" > /home/pi/CubeSatSim/groundstation/MTU_swarm_logs/host_ip.txt
+    echo "New IP saved: $host_ip"
+  fi
+else
+  echo "Transmission not enabled."
+fi
+
+
+#######################################################
+# if APRS Create separate Direwolf config files for each device
 #######################################################
 #Create a config foler, should already exist 
-mkdir -p /home/pi/direwolf
+if [[ "$mode" == "APRS" ]]; then
+  mkdir -p /home/pi/direwolf
 
-for ((i=0; i<device_count; i++)); do
-  loop_index=$((2 + i))  # Loopback sound card index (2, 3, 4, 5...)
-  config_file="/home/pi/direwolf/mtudwconfig$((i+1))"
-  cat <<EOF > "$config_file"
+  for ((i=0; i<device_count; i++)); do
+    loop_index=$((2 + i))  # Loopback sound card index (2, 3, 4, 5...)
+    config_file="/home/pi/direwolf/mtudwconfig$((i+1))"
+    cat <<EOF > "$config_file"
 ADEVICE plughw:${loop_index},1
 CHANNEL 0
 MYCALL NOCALL
@@ -109,7 +127,8 @@ AGWPORT $((8000 + i))
 KISSPORT $((8100 + i))
 LOGDIR /home/pi/CubeSatSim/groundstation/MTU_swarm_logs
 EOF
-done
+  done
+fi
 
 #######################################################
 # Start decoding on each RTL-SDR
