@@ -11,6 +11,7 @@ The second stage focused on enhancing the CubeSat in various ways to address a s
    We restructured the CubeSat to accommodate two motors and new electronic circuit components. This enhancement allows the CubeSat to orient itself in space based on reaction wheel principles.
 
 3. **Decoding multiple CubeSats at the same time :**
+   We created a new software to receive the RF signals from multiple CubeSats at the same time using different SDRs. The RF signal is then decoded and sent to the web server for data visualization.
    
 
 For each of these separate projects, you'll find dedicated folders containing all the necessary information. Additionally, we undertook a thorough analysis of the base code available for CubeSatSim to interact effectively with our enhancements. We've added comments to certain sections of code in the 'soft' directory for the purpose of understanding. It's important to note that these commented code sections have not been altered; they serve merely as tools for comprehension.
@@ -22,6 +23,7 @@ For each of these separate projects, you'll find dedicated folders containing al
 - **Reaction_Wheel_Improvement:** Encompasses information regarding the CubeSat's ability to orient itself using reaction wheels.
 - **Soft:** Holds the original base code with additional comments for understanding purposes.
 - **Web_Serveur:** Contains all the files necessary to visualize various web pages related to the Cubesat, including the work done by other group members.
+- **Swarm_decode**  Contains all the file to receive and decode RF signals from multiple CubeSats
 
 Please refer to individual folders for specific details and resources related to each stage of the project.
 
@@ -32,5 +34,6 @@ The commented sections in the 'soft' directory serve as aids for understanding t
 ## Contributors
 
 - HUGUET Yann(https://github.com/Yannouille29)
+- JOURDAN Thomas (https://github.com/JourdanThomas)
 
 Feel free to reach out to us for any inquiries or clarifications regarding this project.
