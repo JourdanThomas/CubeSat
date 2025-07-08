@@ -146,7 +146,9 @@ echo "Configuration saved to $config_file"
 #######################################################
 # Start transmitting
 #######################################################
-
+if [[ "$host_ip" != "NotTransmitting" ]]; then
+  python3 /home/pi/CubeSatSim/groundstation/MTU_swarm/swarm_packet_transmit.py
+fi
 
 
 
