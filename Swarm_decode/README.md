@@ -1,9 +1,9 @@
 # How to setup the Swarm communication mode
 The Swarm Communication
-## First install
-### Ground Station
+# First install
+## Ground Station
 
-#### Files
+### Files
 on the desktop of the Raspberry Pi of the Ground Station
 **You should have a file named « swarm.desktop » **
 With the following contents:
@@ -14,7 +14,7 @@ Version=1.0
 Name=Swarm Packet Decode using Direwolf
 GenericName=Decodes swarm packet using rtl_fm and Direwolf
 Comment=APRS signals
-Exec=/home/pi/CubeSatSim/groundstation/swarm_packet.sh
+Exec=/home/pi/CubeSatSim/groundstation/MTU_swarm/swarm_packet.sh
 Icon=/home/pi/Icons/aprs.png
 Terminal=true
 Type=Application
@@ -23,12 +23,12 @@ Keywords=APRS;ISS;
 ```
 
 
-You will also need a program in /home/pi/CubeSatSim/groundstation
-This program is named: « swarm_packet.sh" 
+You will also need a program in /home/pi/CubeSatSim/groundstation/MTU_swarm
+This program is named: « swarm_packet.sh » 
 
 The contents are:
 
-#### Serial number issue
+### Serial number issue
 By default, all antennas come with the same serial number, which makes it difficult to use multiple units simultaneously.
 To identify each antenna, you can run:
 `rtl_test` 
@@ -36,19 +36,16 @@ Then, to assign a unique serial number, plug in only one antenna at a time and r
 `sudo rtl_eeprom -s NEW_SERIAL_NUMBER`
 
 
-#### Number of loop_back devices
-##### Setup ALSA Loopback for 4 Devices
+### Number of loop_back devices
+#### Setup ALSA Loopback for 4 Devices
 You need 4 loopback devices so Direwolf instances don’t clash on audio devices.
 Modify /etc/modprobe.d/alsa-loopback.conf like this:
 `options snd-aloop enable=1,1,1,1 index=2,3,4,5 pcm_substreams=2,2,2,2`
 You might not have the permissions to change the configuration file directly so you can use:
 `echo "options snd-aloop enable=1,1,1,1 index=2,3,4,5 pcm_substreams=2,2,2,2" | sudo tee /etc/modprobe.d/alsa-loopback.conf`
 
-
-
-
 This creates 4 loopback sound cards at indexes 2, 3, 4, and 5, each with 2 substreams.
-##### Reload ALSA Loopback Module
+#### Reload ALSA Loopback Module
 Apply changes:
 ```
 sudo modprobe -r snd-aloop
@@ -76,6 +73,8 @@ To change the mode to APRS of each cubesat you need to use
 Or you can press the button until it blinks once and then release.
 
 
+# Starting the program
+You can start the program by
 
 
 

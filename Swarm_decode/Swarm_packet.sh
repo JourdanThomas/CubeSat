@@ -2,8 +2,8 @@
 #######################################################
 # MTU            Swarm_packet.sh
 # script to auto decode packet using rtl_fm and Direwolf
-#made by Thomas Jourdan
-#
+# made by Thomas Jourdan 
+#07/2025
 #######################################################
 #creating the log folder
 mkdir -p /home/pi/CubeSatSim/groundstation/MTU_swarm_logs
@@ -16,8 +16,9 @@ echo
 echo "MTU Nimbus SWARM DECODE"
 echo "V1.11"
 
-#Stopping all processes that might use the devices
+
 sudo modprobe snd-aloop
+#Stopping all processes that might use the devices
 sudo systemctl stop openwebrx
 sudo systemctl stop rtl_tcp
 pkill -o chromium &>/dev/null
@@ -83,29 +84,72 @@ echo
 
 
 #######################################################
-# Ask user if they want to transmit
+# Transmission Configuration
+#
+# The user is prompted to decide whether to transmit data
+# to a remote host (e.g., for live decoding or data relay).
+#
+# CHOICES:
+# 1. If the user clicks "Yes":
+#    - They are asked to enter a host IP address.
+#    - If they enter a valid IP, it is saved to the config.
+#    - If they enter "0", the script attempts to reuse the
+#      previous IP stored in MTU_config.txt.
+#    - If no previous IP is found, transmission is disabled.
+#
+# 2. If the user clicks "No":
+#    - Transmission is disabled.
+#    - "Host_IP=NotTransmitting" is stored in MTU_config.txt
+#      to indicate no IP is in use.
+#
+# This logic ensures the script always writes a complete
+# and valid configuration file, even if transmission is off.
 #######################################################
 transmit=$(zenity --question --text="Do you want to transmit data to the network?" --ok-label="Yes" --cancel-label="No"; echo $?)
 
+host_ip="NotTransmitting"  # default in case user says "No"
+
+#
 if [[ "$transmit" -eq 0 ]]; then
   host_ip=$(zenity --entry --title="Host IP" --text="Enter the host IP address to transmit to (or 0 to keep last):" 2>/dev/null)
-  
+
   if [[ -z "$host_ip" ]]; then
     echo "No IP entered. Transmission disabled."
+    host_ip="NotTransmitting"
   elif [[ "$host_ip" == "0" ]]; then
-    if [[ -f /home/pi/CubeSatSim/groundstation/tx_host.txt ]]; then
-      echo "Keeping previous IP: $(cat /home/pi/CubeSatSim/groundstation/MTU_swarm_logs/host_ip.txt)"
+    if [[ -f /home/pi/CubeSatSim/groundstation/MTU_swarm_logs/MTU_config.txt ]]; then
+      host_ip=$(grep "^Host_IP=" /home/pi/CubeSatSim/groundstation/MTU_swarm_logs/MTU_config.txt | cut -d'=' -f2)
+      echo "Keeping previous IP: $host_ip"
     else
       echo "No previous IP found. Transmission disabled."
-      exit 1
+      sleep(6)
+      host_ip="NotTransmitting"
     fi
   else
-    echo "$host_ip" > /home/pi/CubeSatSim/groundstation/MTU_swarm_logs/host_ip.txt
-    echo "New IP saved: $host_ip"
+    echo "New IP entered: $host_ip"
   fi
 else
   echo "Transmission not enabled."
 fi
+#######################################################
+# Save configuration to MTU_config.txt
+#######################################################
+config_file="/home/pi/CubeSatSim/groundstation/MTU_swarm_logs/MTU_config.txt"
+{
+  echo "Host_IP=$host_ip"
+  echo "Device_Count=$device_count"
+  echo -n "Frequencies="
+  printf "%s " "${frequencies[@]}"
+  echo
+} > "$config_file"
+echo "Configuration saved to $config_file"
+#######################################################
+# Start transmitting
+#######################################################
+
+
+
+
 
 
 #######################################################
@@ -172,6 +216,8 @@ for ((i=0; i<device_count; i++)); do
   echo "  - /home/pi/CubeSatSim/groundstation/MTU_swarm_logs/device_${i}.log"
 done
 echo
+
+
 
 
 #keeps the script running until all background processes end.
