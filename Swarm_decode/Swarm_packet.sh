@@ -1,16 +1,18 @@
 #!/bin/bash
 #######################################################
-# MTU            Swarm_packet.sh
+# MTU            swarm_packet.sh
 # script to auto decode packet using rtl_fm and Direwolf
 # made by Thomas Jourdan 
 #07/2025
 #######################################################
+
+
+
 #creating the log folder
 mkdir -p /home/pi/CubeSatSim/groundstation/MTU_swarm_logs
 #deleting old log files
 rm -f /home/pi/CubeSatSim/groundstation/MTU_swarm_logs/device*
 
-set -x
 
 echo
 echo "MTU Nimbus SWARM DECODE"
@@ -105,9 +107,9 @@ echo
 # This logic ensures the script always writes a complete
 # and valid configuration file, even if transmission is off.
 #######################################################
-transmit=$(zenity --question --text="Do you want to transmit data to the network?" --ok-label="Yes" --cancel-label="No"; echo $?)
+zenity --question --text="Do you want to transmit data to the network?" --ok-label="Yes" --cancel-label="No"
+transmit=$?
 
-host_ip="NotTransmitting"  # default in case user says "No"
 
 #
 if [[ "$transmit" -eq 0 ]]; then
@@ -122,7 +124,7 @@ if [[ "$transmit" -eq 0 ]]; then
       echo "Keeping previous IP: $host_ip"
     else
       echo "No previous IP found. Transmission disabled."
-      sleep(6)
+      sleep 6
       host_ip="NotTransmitting"
     fi
   else
@@ -212,14 +214,17 @@ for ((i=0; i<device_count; i++)); do
   fi
 done
 
+
+
+
+
+
 echo
 echo "All decoders are now running. Logs are being written to:"
 for ((i=0; i<device_count; i++)); do
   echo "  - /home/pi/CubeSatSim/groundstation/MTU_swarm_logs/device_${i}.log"
 done
 echo
-
-
 
 
 #keeps the script running until all background processes end.
