@@ -1,3 +1,12 @@
+# Swarm decode
+ This program allows to decode multiple
+
+
+
+
+
+
+
 # How to setup the Swarm communication mode
 The Swarm Communication
 # First install
@@ -74,7 +83,10 @@ Or you can press the button until it blinks once and then release.
 
 
 # Starting the program
-You can start the program by
+You can start the program by using 
+
+
+
 
 
 
