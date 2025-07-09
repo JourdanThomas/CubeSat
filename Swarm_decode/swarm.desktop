@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.6
+Type=Application
+Name=Swarm Packet Decode using Direwolf
+GenericName=Swarm Packet Decoder
+Comment=Decodes swarm packet using rtl_fm and Direwolf
+Exec=/home/pi/CubeSatSim/groundstation/MTU_swarm/swarm_packet.sh
+Icon=/home/pi/Icons/aprs.png
+Terminal=true
+Categories=Utility;HamRadio;
+Keywords=APRS;ISS;
