@@ -174,7 +174,24 @@ def get_data():
 
 
 # Function to receive data from a socket
-def receive_data():
+def get_config():
+    # Create a socket for communication
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.bind((pc_ip, pc_port))
+    print(f"Socket listening on {pc_ip}:{pc_port}...")
+
+    while True:
+        data, addr = s.recvfrom(1024)
+        received_data = data.decode('utf-8')
+        print(f"Received data from {addr}: {received_data}")  # Log reception
+        
+        # Save the data in the text file
+        with open(output_file, 'a') as f:
+            f.write(received_data + '\n')
+            print(f"Data written to {output_file}")
+
+# Function to receive data from a socket
+def get_alldata():
     # Create a socket for communication
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.bind((pc_ip, pc_port))
