@@ -1,0 +1,3 @@
+Host_IP=192.168.76.173
+Device_Count=1
+Frequencies=436000000 
