@@ -26,6 +26,9 @@ def get_local_ip():
 pc_ip = get_local_ip()   # IP address of the Wi-Fi shared with the Raspberry Pi
 pc_port = 8080
 
+config_port=5000
+
+
 ascii_art = """  ____      _          ____        _   ____  _
  / ___|   _| |__   ___/ ___|  __ _| |_/ ___|(_)_ __ ___
 | |  | | | | '_ \ / _ \___ \ / _` | __\___ \| | '_ ` _ \\
@@ -44,6 +47,11 @@ print(ascii_art)
 
 print ("")
 print("the PC IP is:",pc_ip)
+
+
+
+
+
 # Location of the text file where you want to save the data
 output_file = '/Users/thomasjourdan/Mines/stage/MTU/CubeSat_MTU-main/Web_Serveur/data.txt'
 
@@ -177,8 +185,8 @@ def get_data():
 def get_config():
     # Create a socket for communication
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.bind((pc_ip, pc_port))
-    print(f"Socket listening on {pc_ip}:{pc_port}...")
+    s.bind((pc_ip, config_port))
+    print(f"Socket listening on {pc_ip}:{config_port}...")
 
     while True:
         data, addr = s.recvfrom(1024)
@@ -189,6 +197,10 @@ def get_config():
         with open(output_file, 'a') as f:
             f.write(received_data + '\n')
             print(f"Data written to {output_file}")
+
+
+
+            
 
 # Function to receive data from a socket
 def get_alldata():
