@@ -147,8 +147,6 @@ def get_ip():
 
 
 
-
-
 # Create a route to retrieve data
 @app.route('/get_data', methods=['GET'])
 def get_data():
@@ -181,49 +179,55 @@ def get_data():
         return jsonify({"error": f"There has been an error : {str(e)}"}), 500
 
 
-# Function to receive data from a socket
+# Function to receive the config file from a socket
+@app.route('/get_config', methods=['GET'])
 def get_config():
-    # Create a socket for communication
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.bind((pc_ip, config_port))
-    print(f"Socket listening on {pc_ip}:{config_port}...")
-
-    while True:
-        data, addr = s.recvfrom(1024)
-        received_data = data.decode('utf-8')
-        print(f"Received data from {addr}: {received_data}")  # Log reception
-        
-        # Save the data in the text file
-        with open(output_file, 'a') as f:
-            f.write(received_data + '\n')
-            print(f"Data written to {output_file}")
-
+    def receive_config():
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.bind((pc_ip, config_port))
+        print(f"Config socket listening on {pc_ip}:{config_port}...")
+        while True:
+            data, addr = s.recvfrom(1024)
+            received_data = data.decode('utf-8')
+            print(f"[CONFIG] Received data from {addr}: {received_data}")
+            with open(output_file, 'a') as f:
+                f.write(received_data + '\n')
+                print(f"[CONFIG] Data written to {output_file}")
+    threading.Thread(target=receive_config, daemon=True).start()
+    return jsonify({"status": f"Config receiver started on port {config_port}."})
 
 
-            
 
-# Function to receive data from a socket
+@app.route('/get_alldata', methods=['GET'])
 def get_alldata():
-    # Create a socket for communication
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.bind((pc_ip, pc_port))
-    print(f"Socket listening on {pc_ip}:{pc_port}...")
+    def receive_alldata(port):
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.bind((pc_ip, port))
+        print(f"[ALLDATA] Socket listening on {pc_ip}:{port}...")
+        while True:
+            data, addr = s.recvfrom(1024)
+            received_data = data.decode('utf-8')
+            print(f"[ALLDATA] Received data from {addr} on port {port}: {received_data}")
+            with open(output_file, 'a') as f:
+                f.write(received_data + '\n')
+                print(f"[ALLDATA] Data written to {output_file}")
 
-    while True:
-        data, addr = s.recvfrom(1024)
-        received_data = data.decode('utf-8')
-        print(f"Received data from {addr}: {received_data}")  # Log reception
+    # Start a thread for each port
+    for port in alldata_ports:
+        threading.Thread(target=receive_alldata, args=(port,), daemon=True).start()
+    return jsonify({"status": f"All-data receivers started on ports {alldata_ports}."})
+
+
+
+
+
         
-        # Save the data in the text file
-        with open(output_file, 'a') as f:
-            f.write(received_data + '\n')
-            print(f"Data written to {output_file}")
 
 if __name__ == '__main__':
     # Create a thread to execute the receive_data function
-    receive_thread = threading.Thread(target=receive_data)
+    #receive_thread = threading.Thread(target=receive_data)
 
     # Start the thread
-    receive_thread.start()
+    #receive_thread.start()
     app.run(host='0.0.0.0', port=8080)  # Run the Flask server on all PC interfaces
 

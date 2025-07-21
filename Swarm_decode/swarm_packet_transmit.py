@@ -92,7 +92,7 @@ def main():
     log_files = [os.path.join(LOG_DIR, f"device_{i}.log") for i in range(device_count)]
     tails = []
 	# Initialize tails for each log file
-	print("Initializing log file tails...")
+    print("Initializing log file tails...")
     for i, log_file in enumerate(log_files):
         if os.path.exists(log_file):
             tails.append(tail_f(log_file))
@@ -100,7 +100,7 @@ def main():
             tails.append(None)
 
 	# Main loop to read from log files and send data through sockets
-	print("Starting data transmission...")
+    print("Starting data transmission...")
     try:
         while True:
             for i in range(device_count):
@@ -120,7 +120,7 @@ def main():
     finally:
         for s in sockets:
             if s:
-				s.close()
+                s.close()
 
 if __name__ == "__main__":
     main()
