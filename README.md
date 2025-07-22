@@ -35,10 +35,10 @@ Please refer to individual folders for specific details and resources related to
 The commented sections in the 'soft' directory serve as aids for understanding the base code and should not be modified. They are solely intended to facilitate comprehension.
 
 ## Contributors
-- CASTELLANO Amélie 
-- ENAULT Fanny 
-- HUGUET Yann(https://github.com/Yannouille29)
-- JOURDAN Thomas (https://github.com/JourdanThomas)
-- CHETOUANE M'hamed
+- CASTELLANO Amélie (2023)
+- ENAULT Fanny (2023)
+- HUGUET Yann (2023)(https://github.com/Yannouille29) 
+- JOURDAN Thomas (2025)(https://github.com/JourdanThomas)
+- CHETOUANE M’hamed (2025)
 
 Feel free to reach out to us for any inquiries or clarifications regarding this project.

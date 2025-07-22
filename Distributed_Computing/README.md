@@ -3,8 +3,26 @@ On a small satellite such as a cubesat, the computing power of a single cubesat 
 Distributed Satellite System (DSS) architectures
 
 
-We will be implementing a star architecture
-#Communication
+We will be implementing a star architecture with a central hub that can be placed on a cubesat that will act as a master
+# Communication
+
+
+
+
+
+
+# Setting up the Program
+
+## on the main hub
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12,6 +30,14 @@ We will be implementing a star architecture
 
 
 ### Sources
+
+Distributed Computing on CubeSat Clusters using MapReduce
+Obulapathi N Challa, Dr. Janise McNair
+University of FLorida
+https://icubesat.org/wp-content/uploads/2012/06/icubesat-org-2012-a-2-6-_paper_challa.pdf
+
+
+
 A Distributed Computing Architecture for Small Satellite
 and Multi-Spacecraft Missions
 Bryan Palmintier∗ , Christopher Kitts∗ , Pascal Stang∗ and Michael Swartwout∗∗
