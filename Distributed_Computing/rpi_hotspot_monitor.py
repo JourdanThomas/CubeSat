@@ -34,18 +34,17 @@ class HotspotManager:
         for package in packages:
             try:
                 subprocess.run(["which", package], check=True, capture_output=True)
-                print(f"✓ {package} is installed")
+                print("OK: " + package + " is installed")
             except subprocess.CalledProcessError:
-                print(f"Installing {package}...")
+                print("Installing " + package + "...")
                 subprocess.run(["apt", "update"], check=True)
                 subprocess.run(["apt", "install", "-y", package], check=True)
     
     def create_hostapd_config(self):
         """Create hostapd configuration file"""
-        config_content = f"""
-interface={self.interface}
+        config_content = """interface={interface}
 driver=nl80211
-ssid={self.ssid}
+ssid={ssid}
 hw_mode=g
 channel=7
 wmm_enabled=0
@@ -53,14 +52,14 @@ macaddr_acl=0
 auth_algs=1
 ignore_broadcast_ssid=0
 wpa=2
-wpa_passphrase={self.password}
+wpa_passphrase={password}
 wpa_key_mgmt=WPA-PSK
 wpa_pairwise=TKIP
-rsn_pairwise=CCMP
-"""
+rsn_pairwise=CCMP""".format(interface=self.interface, ssid=self.ssid, password=self.password)
+        
         with open("/etc/hostapd/hostapd.conf", "w") as f:
-            f.write(config_content.strip())
-        print("✓ Created hostapd configuration")
+            f.write(config_content)
+        print("OK: Created hostapd configuration")
     
     def create_dnsmasq_config(self):
         """Create dnsmasq configuration for DHCP"""
@@ -68,13 +67,12 @@ rsn_pairwise=CCMP
         if os.path.exists("/etc/dnsmasq.conf") and not os.path.exists("/etc/dnsmasq.conf.backup"):
             subprocess.run(["cp", "/etc/dnsmasq.conf", "/etc/dnsmasq.conf.backup"])
         
-        config_content = f"""
-interface={self.interface}
-dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
-"""
+        config_content = """interface={interface}
+dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h""".format(interface=self.interface)
+        
         with open("/etc/dnsmasq.conf", "w") as f:
-            f.write(config_content.strip())
-        print("✓ Created dnsmasq configuration")
+            f.write(config_content)
+        print("OK: Created dnsmasq configuration")
     
     def configure_interface(self):
         """Configure the wireless interface"""
@@ -88,9 +86,9 @@ dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
             try:
                 subprocess.run(cmd, check=True, capture_output=True)
             except subprocess.CalledProcessError as e:
-                print(f"Warning: Command {' '.join(cmd)} failed: {e}")
+                print("Warning: Command " + " ".join(cmd) + " failed: " + str(e))
         
-        print("✓ Configured network interface")
+        print("OK: Configured network interface")
     
     def enable_ip_forwarding(self):
         """Enable IP forwarding for internet sharing"""
@@ -110,7 +108,7 @@ dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
             except subprocess.CalledProcessError:
                 pass  # Rule might already exist
         
-        print("✓ Enabled IP forwarding and NAT")
+        print("OK: Enabled IP forwarding and NAT")
     
     def start_services(self):
         """Start hostapd and dnsmasq services"""
@@ -123,10 +121,10 @@ dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
             subprocess.run(["systemctl", "start", "hostapd"], check=True)
             subprocess.run(["systemctl", "start", "dnsmasq"], check=True)
             
-            print("✓ Started hostapd and dnsmasq services")
+            print("OK: Started hostapd and dnsmasq services")
             return True
         except subprocess.CalledProcessError as e:
-            print(f"✗ Failed to start services: {e}")
+            print("ERROR: Failed to start services: " + str(e))
             return False
     
     def get_connected_devices(self):
@@ -187,7 +185,7 @@ dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
     
     def monitor_devices(self):
         """Continuously monitor connected devices"""
-        print(f"\n🔍 Monitoring devices on hotspot '{self.ssid}'...")
+        print("\nMonitoring devices on hotspot '" + self.ssid + "'...")
         print("=" * 70)
         
         while self.running:
@@ -199,12 +197,12 @@ dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
                     if mac not in self.connected_devices:
                         vendor = self.get_device_vendor(mac)
                         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                        print(f"📱 NEW DEVICE CONNECTED:")
-                        print(f"   Time: {timestamp}")
-                        print(f"   MAC:  {mac}")
-                        print(f"   IP:   {info['ip']}")
-                        print(f"   Vendor: {vendor}")
-                        print(f"   Method: {info['method']}")
+                        print("NEW DEVICE CONNECTED:")
+                        print("   Time: " + timestamp)
+                        print("   MAC:  " + mac)
+                        print("   IP:   " + info['ip'])
+                        print("   Vendor: " + vendor)
+                        print("   Method: " + info['method'])
                         print("-" * 50)
                         
                         self.connected_devices[mac] = {
@@ -223,31 +221,31 @@ dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
                 for mac in disconnected:
                     device_info = self.connected_devices[mac]
                     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                    print(f"📵 DEVICE DISCONNECTED:")
-                    print(f"   Time: {timestamp}")
-                    print(f"   MAC:  {mac}")
-                    print(f"   Was:  {device_info['ip']} ({device_info['vendor']})")
+                    print("DEVICE DISCONNECTED:")
+                    print("   Time: " + timestamp)
+                    print("   MAC:  " + mac)
+                    print("   Was:  " + device_info['ip'] + " (" + device_info['vendor'] + ")")
                     print("-" * 50)
                     del self.connected_devices[mac]
                 
                 # Show current status every 30 seconds
                 if int(time.time()) % 30 == 0:
-                    print(f"📊 Status at {datetime.now().strftime('%H:%M:%S')}: {len(self.connected_devices)} devices connected")
+                    print("Status at " + datetime.now().strftime('%H:%M:%S') + ": " + str(len(self.connected_devices)) + " devices connected")
                     if self.connected_devices:
                         for mac, info in self.connected_devices.items():
-                            print(f"   • {mac} ({info['ip']}) - {info['vendor']}")
+                            print("   - " + mac + " (" + info['ip'] + ") - " + info['vendor'])
                 
                 time.sleep(5)  # Check every 5 seconds
                 
             except KeyboardInterrupt:
                 break
             except Exception as e:
-                print(f"Error monitoring devices: {e}")
+                print("Error monitoring devices: " + str(e))
                 time.sleep(5)
     
     def cleanup(self):
         """Clean up and stop services"""
-        print("\n🧹 Cleaning up...")
+        print("\nCleaning up...")
         self.running = False
         
         try:
@@ -262,18 +260,18 @@ dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
             subprocess.run(["ip", "addr", "flush", "dev", self.interface], capture_output=True)
             subprocess.run(["ip", "link", "set", "dev", self.interface, "down"], capture_output=True)
             
-            print("✓ Cleanup completed")
+            print("OK: Cleanup completed")
         except Exception as e:
-            print(f"Error during cleanup: {e}")
+            print("Error during cleanup: " + str(e))
     
     def run(self):
         """Main execution function"""
-        print("🔥 Raspberry Pi Hotspot Manager")
+        print("Raspberry Pi Hotspot Manager")
         print("=" * 40)
         
         # Setup signal handler for graceful shutdown
         def signal_handler(sig, frame):
-            print("\n⚠️  Shutdown requested...")
+            print("\nShutdown requested...")
             self.cleanup()
             sys.exit(0)
         
@@ -282,7 +280,7 @@ dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
         
         try:
             self.check_root()
-            print("✓ Running with root privileges")
+            print("OK: Running with root privileges")
             
             self.install_dependencies()
             self.create_hostapd_config()
@@ -291,9 +289,9 @@ dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
             self.enable_ip_forwarding()
             
             if self.start_services():
-                print(f"🚀 Hotspot '{self.ssid}' is now active!")
-                print(f"📶 Password: {self.password}")
-                print(f"🌐 Gateway IP: 192.168.4.1")
+                print("Hotspot '" + self.ssid + "' is now active!")
+                print("Password: " + self.password)
+                print("Gateway IP: 192.168.4.1")
                 
                 # Start monitoring in a separate thread
                 monitor_thread = threading.Thread(target=self.monitor_devices)
@@ -304,18 +302,26 @@ dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
                 while self.running:
                     time.sleep(1)
             else:
-                print("✗ Failed to start hotspot services")
+                print("ERROR: Failed to start hotspot services")
                 
         except Exception as e:
-            print(f"✗ Error: {e}")
+            print("ERROR: " + str(e))
         finally:
             self.cleanup()
 
-if __name__ == "__main__":
+def main():
+    """Main function to run the hotspot manager"""
     # Configuration - modify these as needed
     SSID = "RaspberryPi-Hotspot"
     PASSWORD = "raspberry123"  # Must be at least 8 characters
     INTERFACE = "wlan0"  # Usually wlan0 for Pi 3
     
-    hotspot = HotspotManager(ssid=SSID, password=PASSWORD, interface=INTERFACE)
-    hotspot.run()
+    try:
+        hotspot = HotspotManager(ssid=SSID, password=PASSWORD, interface=INTERFACE)
+        hotspot.run()
+    except Exception as e:
+        print("Fatal error: " + str(e))
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()
