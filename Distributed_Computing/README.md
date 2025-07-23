@@ -13,8 +13,15 @@ We will be implementing a star architecture with a central hub that can be place
 
 # Setting up the Program
 
-## on the main hub
-
+## on the Master
+We will be using the network manager and scapy, if it is the first time starting the program you will need:
+```
+sudo apt update
+sudo apt install network-manager
+sudo apt install python3-scapy -y
+```
+You can then detect device via
+nmcli device
 
 
 
