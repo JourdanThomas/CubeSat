@@ -11,9 +11,9 @@ RASPBERRY_MAC_PREFIXES = [
 ]
 
 # Hotspot settings
-HOTSPOT_IFACE = "wlan0"
-HOTSPOT_SSID = "PiHotspot"
-HOTSPOT_PASSWORD = "raspberry123"
+HOTSPOT_IFACE = "wlan1"
+HOTSPOT_SSID = "Master_CubeSat"
+HOTSPOT_PASSWORD = "raspberry"
 SUBNET = "192.168.50.1/24"  # Adjust if different
 
 
@@ -59,17 +59,26 @@ def scan_for_raspberry_pis(ip_range=SUBNET):
 
 
 if __name__ == "__main__":
+    print("Starting...")
     start_hotspot()
 
     # Wait for devices to connect
     print("Waiting for devices to connect...")
     time.sleep(10)
 
-    devices = scan_for_raspberry_pis()
 
-    if devices:
-        print("Raspberry Pi devices found:")
-        for i, device in enumerate(devices, 1):
-            print(f"{i}. IP: {device['ip']}, MAC: {device['mac']}")
-    else:
-        print("No Raspberry Pi devices found.")
+    while True:
+
+        devices = scan_for_raspberry_pis()
+
+        if devices:
+            print("Raspberry Pi devices found:")
+            for i, device in enumerate(devices, 1):
+                print(f"{i}. IP: {device['ip']}, MAC: {device['mac']}")
+        else:
+            print("No Raspberry Pi devices found.")
+
+        time.sleep(10)
+
+
+
