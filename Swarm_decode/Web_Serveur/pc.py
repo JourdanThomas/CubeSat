@@ -26,7 +26,11 @@ def get_local_ip():
 pc_ip = get_local_ip()   # IP address of the Wi-Fi shared with the Raspberry Pi
 pc_port = 8080
 
-config_port=5000
+# Configuration for receiving data
+config_port = 5000
+base_data_port = 5001  # Should match the base_port in swarm_packet_transmit.py
+device_count = 0  # Will be set when config is received
+data_receivers = {}  # Dictionary to store data from each device
 
 
 ascii_art = """  ____      _          ____        _   ____  _
@@ -42,33 +46,20 @@ ascii_art = """  ____      _          ____        _   ____  _
 
 print(ascii_art)
 
-
-
-
-print ("")
+print("")
 print("the PC IP is:",pc_ip)
-
-
-
-
+print("the PC port is:",pc_port)
+print("")
 
 # Location of the text file where you want to save the data
 output_file = '/Users/thomasjourdan/Mines/stage/MTU/CubeSat_MTU-main/Web_Serveur/data.txt'
 
-
-
-
-
-
 qr = pyqrcode. create(content='http://'+str(pc_ip)+':'+str(pc_port) )
 print(qr. terminal(module_color='white', background='black'))
 
-
-
-
-
-
-
+################################################
+#     Configuration for Flask web server
+################################################
 
 app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), 'templates'))
 CORS(app, resources={r"/get_data": {"origins": "*"}})
@@ -137,97 +128,194 @@ def project_link_wifi():
 
 ################################################################################################
 
+################################################################################################
 
 # Create a route to retrieve the IP (useful to get the IP from another device)
-
 @app.route('/get_ip', methods=['GET'])
 def get_ip():
     return jsonify({"ip_port": str(pc_ip)+':'+str(pc_port)})
 
 
-
-
-# Create a route to retrieve data
+# Create a route to retrieve data from all devices
 @app.route('/get_data', methods=['GET'])
 def get_data():
-    time.sleep(1)
     try:
         with open(output_file, 'r') as f:
             data = f.read().splitlines()
             str_data = []
 
-            # If the file has more than 3 lines, take the last 3 lines
-            if len(data) > 3:
-                data = data[-3:]
+            # If the file has more than 10 lines, take the last 10 lines
+            if len(data) > 10:
+                data = data[-10:]
 
             # Split each line using comma as a delimiter
             for d in data:
                 values = d.split(',')
-                # Add values to str_data
                 str_data.append(values)
 
         return jsonify(str_data)
     
     except FileNotFoundError:
         error_message = f"Error: The file '{output_file}' can't be found."
-        print(error_message)  # Log to console
+        print(error_message)
         return jsonify({"error": f"The file '{output_file}' can't be found."}), 404 
 
     except Exception as e:
         error_message = f"Unexpected error: {str(e)}"
-        print(error_message)  # Log to console
+        print(error_message)
         return jsonify({"error": f"There has been an error : {str(e)}"}), 500
 
 
-# Function to receive the config file from a socket
+# Route to get data from a specific device
+@app.route('/get_device_data/<int:device_id>', methods=['GET'])
+def get_device_data(device_id):
+    try:
+        if device_id in data_receivers:
+            # Return the last few lines of data for this specific device
+            device_data = data_receivers[device_id][-10:] if len(data_receivers[device_id]) > 10 else data_receivers[device_id]
+            return jsonify({"device_id": device_id, "data": device_data})
+        else:
+            return jsonify({"error": f"Device {device_id} not found or not connected"}), 404
+    except Exception as e:
+        return jsonify({"error": f"Error retrieving device data: {str(e)}"}), 500
+
+
+# Route to get configuration information
 @app.route('/get_config', methods=['GET'])
 def get_config():
-    def receive_config():
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.bind((pc_ip, config_port))
-        print(f"Config socket listening on {pc_ip}:{config_port}...")
-        while True:
-            data, addr = s.recvfrom(1024)
+    try:
+        with open(config_file, 'r') as f:
+            config_data = f.read()
+        return jsonify({"config": config_data})
+    except FileNotFoundError:
+        return jsonify({"error": "Config file not found"}), 404
+    except Exception as e:
+        return jsonify({"error": f"Error reading config: {str(e)}"}), 500
+
+
+# Route to get system status
+@app.route('/get_status', methods=['GET'])
+def get_status():
+    return jsonify({
+        "pc_ip": pc_ip,
+        "device_count": device_count,
+        "connected_devices": list(data_receivers.keys()),
+        "config_port": config_port,
+        "base_data_port": base_data_port
+    })
+
+
+################################################
+#     Network receivers for configuration and data
+################################################
+
+def receive_config():
+    """Receive configuration file via UDP on config_port"""
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.bind((pc_ip, config_port))
+    print(f"Config receiver listening on {pc_ip}:{config_port}...")
+    
+    while True:
+        try:
+            data, addr = s.recvfrom(4096)  # Larger buffer for config file
             received_data = data.decode('utf-8')
-            print(f"[CONFIG] Received data from {addr}: {received_data}")
-            with open(output_file, 'a') as f:
-                f.write(received_data + '\n')
-                print(f"[CONFIG] Data written to {output_file}")
-    threading.Thread(target=receive_config, daemon=True).start()
-    return jsonify({"status": f"Config receiver started on port {config_port}."})
+            print(f"[CONFIG] Received config from {addr}: {len(received_data)} bytes")
+            
+            # Save config to file
+            with open(config_file, 'w') as f:
+                f.write(received_data)
+            
+            # Parse device count from config
+            global device_count
+            for line in received_data.split('\n'):
+                if 'Device_Count=' in line:
+                    device_count = int(line.split('=')[1])
+                    print(f"[CONFIG] Device count set to: {device_count}")
+                    # Start data receivers for each device
+                    start_data_receivers()
+                    break
+                    
+        except Exception as e:
+            print(f"[CONFIG] Error receiving config: {e}")
 
 
-
-@app.route('/get_alldata', methods=['GET'])
-def get_alldata():
-    def receive_alldata(port):
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.bind((pc_ip, port))
-        print(f"[ALLDATA] Socket listening on {pc_ip}:{port}...")
-        while True:
-            data, addr = s.recvfrom(1024)
-            received_data = data.decode('utf-8')
-            print(f"[ALLDATA] Received data from {addr} on port {port}: {received_data}")
-            with open(output_file, 'a') as f:
-                f.write(received_data + '\n')
-                print(f"[ALLDATA] Data written to {output_file}")
-
-    # Start a thread for each port
-    for port in alldata_ports:
-        threading.Thread(target=receive_alldata, args=(port,), daemon=True).start()
-    return jsonify({"status": f"All-data receivers started on ports {alldata_ports}."})
-
-
-
-
-
+def receive_device_data(device_id, port):
+    """Receive data from a specific device via TCP"""
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    
+    try:
+        server_socket.bind((pc_ip, port))
+        server_socket.listen(1)
+        print(f"[DEVICE {device_id}] Data receiver listening on {pc_ip}:{port}...")
         
+        # Initialize data storage for this device
+        data_receivers[device_id] = []
+        
+        while True:
+            try:
+                client_socket, addr = server_socket.accept()
+                print(f"[DEVICE {device_id}] Connected to {addr}")
+                
+                while True:
+                    data = client_socket.recv(1024)
+                    if not data:
+                        break
+                    
+                    received_line = data.decode('utf-8').strip()
+                    if received_line:
+                        print(f"[DEVICE {device_id}] Received: {received_line[:50]}...")
+                        
+                        # Store data for this device
+                        data_receivers[device_id].append(received_line)
+                        
+                        # Keep only last 100 lines per device to prevent memory issues
+                        if len(data_receivers[device_id]) > 100:
+                            data_receivers[device_id] = data_receivers[device_id][-100:]
+                        
+                        # Also write to main output file with device identifier
+                        with open(output_file, 'a') as f:
+                            f.write(f"device_{device_id},{received_line}\n")
+                            
+            except Exception as e:
+                print(f"[DEVICE {device_id}] Connection error: {e}")
+                time.sleep(1)  # Wait before trying to accept new connections
+                
+    except Exception as e:
+        print(f"[DEVICE {device_id}] Socket error: {e}")
+    finally:
+        server_socket.close()
+
+
+def start_data_receivers():
+    """Start TCP receivers for each device"""
+    global device_count
+    if device_count > 0:
+        print(f"Starting data receivers for {device_count} devices...")
+        for i in range(device_count):
+            port = base_data_port + i
+            threading.Thread(
+                target=receive_device_data, 
+                args=(i, port), 
+                daemon=True
+            ).start()
+
+
+################################################
+#     Main application startup
+################################################
 
 if __name__ == '__main__':
-    # Create a thread to execute the receive_data function
-    #receive_thread = threading.Thread(target=receive_data)
-
-    # Start the thread
-    #receive_thread.start()
-    app.run(host='0.0.0.0', port=8080)  # Run the Flask server on all PC interfaces
-
+    # Start config receiver
+    config_thread = threading.Thread(target=receive_config, daemon=True)
+    config_thread.start()
+    
+    print(f"Server starting on {pc_ip}:{pc_port}")
+    print("Available endpoints:")
+    print(f"  - Configuration: GET {pc_ip}:{pc_port}/get_config")
+    print(f"  - All data: GET {pc_ip}:{pc_port}/get_data")
+    print(f"  - Device data: GET {pc_ip}:{pc_port}/get_device_data/<device_id>")
+    print(f"  - System status: GET {pc_ip}:{pc_port}/get_status")
+    
+    # Run the Flask server
+    app.run(host='0.0.0.0', port=pc_port, debug=False)

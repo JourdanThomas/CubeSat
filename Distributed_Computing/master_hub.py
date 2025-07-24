@@ -45,7 +45,7 @@ def scan_for_raspberry_pis(ip_range=SUBNET):
     packet = ether / arp
 
     result = srp(packet, timeout=2, verbose=0)[0]
-
+    print result
     raspberry_devices = []
     other_devices = []
 

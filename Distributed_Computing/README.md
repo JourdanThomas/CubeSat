@@ -21,6 +21,7 @@ sudo apt install network-manager
 sudo apt install python3-scapy -y
 ```
 You can then detect device via
+
 nmcli device
 
 
