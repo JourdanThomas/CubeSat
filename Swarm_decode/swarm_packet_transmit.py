@@ -26,7 +26,6 @@ LOG_DIR = "/home/pi/CubeSatSim/groundstation/MTU_swarm_logs"
 
 
 # Function to read the configuration file
-
 def read_config():
     config_path = os.path.join(LOG_DIR, "MTU_config.txt")
     cfg = {}
@@ -52,12 +51,43 @@ def read_config():
         print(f"Error reading config file: {e}")
         logging.error(f"Error reading config file: {e}")
         return {}
+    
 
 
 #cfg = read_config()
 #host_ip = cfg.get("Host_IP")
 #device_count = cfg.get("Device_Count")
 #frequencies = cfg.get("Frequencies")
+
+
+# Function to send configuration file via UDP
+def send_config(host_ip, config_port=5000):
+    """Send configuration file to the PC via UDP"""
+    config_path = os.path.join(LOG_DIR, "MTU_config.txt")
+    
+    try:
+        with open(config_path, 'r') as f:
+            config_data = f.read()
+        
+        # Create UDP socket
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        
+        # Send config data
+        s.sendto(config_data.encode('utf-8'), (host_ip, config_port))
+        print(f"Configuration file sent to {host_ip}:{config_port}")
+        logging.info(f"Configuration file sent to {host_ip}:{config_port}")
+        
+        s.close()
+        return True
+        
+    except FileNotFoundError:
+        print(f"Config file not found: {config_path}")
+        logging.error(f"Config file not found: {config_path}")
+        return False
+    except Exception as e:
+        print(f"Error sending config: {e}")
+        logging.error(f"Error sending config: {e}")
+        return False
 
 
 # Function to tail a file
@@ -88,11 +118,6 @@ def get_ports(device_count, base_port=5001):
     return [base_port + i for i in range(device_count)]
 
 
-
-
-
-
-
 # Function to create and manage socket connection
 def create_socket_connection(host_ip, port, max_retries=5):
     """Create a socket connection with retry logic."""
@@ -111,21 +136,6 @@ def create_socket_connection(host_ip, port, max_retries=5):
                 s.close()
             time.sleep(2)  # Wait before retry
     return None
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ######################################################################
@@ -149,6 +159,15 @@ def main():
 
     print(f"Starting transmission to {host_ip} for {device_count} devices")
     logging.info(f"Starting transmission to {host_ip} for {device_count} devices")
+
+    # First, send the configuration file
+    print("Sending configuration file...")
+    if not send_config(host_ip):
+        print("Failed to send configuration file. Continuing anyway...")
+    else:
+        print("Configuration file sent successfully!")
+        # Wait a bit for the PC to process the config and start data receivers
+        time.sleep(2)
 
     ports = get_ports(device_count)
     sockets = []
@@ -226,8 +245,6 @@ def main():
                 except:
                     pass
         print("Cleanup complete.")
-
-
 
 
 ###################################

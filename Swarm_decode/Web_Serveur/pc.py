@@ -32,6 +32,8 @@ base_data_port = 5001  # Should match the base_port in swarm_packet_transmit.py
 device_count = 0  # Will be set when config is received
 data_receivers = {}  # Dictionary to store data from each device
 
+# Configuration file path (will be created when received)
+config_file = '/Users/thomasjourdan/Documents/GitHub/CubeSat/Swarm_decode/data/received_config.txt'
 
 ascii_art = """  ____      _          ____        _   ____  _
  / ___|   _| |__   ___/ ___|  __ _| |_/ ___|(_)_ __ ___
@@ -52,10 +54,13 @@ print("the PC port is:",pc_port)
 print("")
 
 # Location of the text file where you want to save the data
-output_file = '/Users/thomasjourdan/Mines/stage/MTU/CubeSat_MTU-main/Web_Serveur/data.txt'
+output_file = '/Users/thomasjourdan/Documents/GitHub/CubeSat/Swarm_decode/data/data.txt'
 
-qr = pyqrcode. create(content='http://'+str(pc_ip)+':'+str(pc_port) )
-print(qr. terminal(module_color='white', background='black'))
+# Create data directory if it doesn't exist
+os.makedirs(os.path.dirname(output_file), exist_ok=True)
+
+qr = pyqrcode.create(content='http://'+str(pc_ip)+':'+str(pc_port) )
+print(qr.terminal(module_color='white', background='black'))
 
 ################################################
 #     Configuration for Flask web server
@@ -184,11 +189,12 @@ def get_device_data(device_id):
 @app.route('/get_config', methods=['GET'])
 def get_config():
     try:
-        with open(config_file, 'r') as f:
-            config_data = f.read()
-        return jsonify({"config": config_data})
-    except FileNotFoundError:
-        return jsonify({"error": "Config file not found"}), 404
+        if os.path.exists(config_file):
+            with open(config_file, 'r') as f:
+                config_data = f.read()
+            return jsonify({"config": config_data})
+        else:
+            return jsonify({"error": "Config file not received yet"}), 404
     except Exception as e:
         return jsonify({"error": f"Error reading config: {str(e)}"}), 500
 
@@ -201,7 +207,8 @@ def get_status():
         "device_count": device_count,
         "connected_devices": list(data_receivers.keys()),
         "config_port": config_port,
-        "base_data_port": base_data_port
+        "base_data_port": base_data_port,
+        "config_received": os.path.exists(config_file)
     })
 
 
@@ -224,6 +231,8 @@ def receive_config():
             # Save config to file
             with open(config_file, 'w') as f:
                 f.write(received_data)
+            
+            print(f"[CONFIG] Configuration saved to {config_file}")
             
             # Parse device count from config
             global device_count
