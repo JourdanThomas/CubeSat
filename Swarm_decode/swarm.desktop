@@ -7,5 +7,6 @@ Comment=Decodes swarm packet using rtl_fm and Direwolf
 Exec=/home/pi/CubeSatSim/groundstation/MTU_swarm/swarm_packet.sh
 Icon=/home/pi/Icons/aprs.png
 Terminal=true
-Categories=Utility;HamRadio;
+Categories=HamRadio;
 Keywords=APRS;ISS;
+Name[en_US]=swarm.desktop

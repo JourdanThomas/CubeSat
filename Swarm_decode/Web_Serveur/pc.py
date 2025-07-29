@@ -162,9 +162,9 @@ def get_data():
             data = f.read().splitlines()
             str_data = []
 
-            # If the file has more than 10 lines, take the last 10 lines
-            if len(data) > 10:
-                data = data[-10:]
+            # If the file has more than 50 lines, take the last 50 lines
+            if len(data) > 50:
+                data = data[-50:]
 
             # Split each line using comma as a delimiter
             for d in data:
@@ -190,7 +190,7 @@ def get_device_data(device_id):
     try:
         if device_id in data_receivers:
             # Return the last few lines of data for this specific device
-            device_data = data_receivers[device_id][-10:] if len(data_receivers[device_id]) > 10 else data_receivers[device_id]
+            device_data = data_receivers[device_id][-50:] if len(data_receivers[device_id]) > 50 else data_receivers[device_id]
             return jsonify({"device_id": device_id, "data": device_data})
         else:
             return jsonify({"error": f"Device {device_id} not found or not connected"}), 404
@@ -291,10 +291,10 @@ def receive_device_data(device_id, port):
                         # Store data for this device
                         data_receivers[device_id].append(received_line)
                         
-                        # Keep only last 100 lines per device to prevent memory issues
-                        if len(data_receivers[device_id]) > 100:
-                            data_receivers[device_id] = data_receivers[device_id][-100:]
-                        
+                        # Keep only last 200 lines per device to prevent memory issues
+                        if len(data_receivers[device_id]) > 200:
+                            data_receivers[device_id] = data_receivers[device_id][-200:]
+
                         # Also write to main output file with device identifier
                         with open(output_file, 'a') as f:
                             f.write(f"device_{device_id},{received_line}\n")

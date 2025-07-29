@@ -3,10 +3,6 @@
 
 
 
-
-
-
-
 # How to setup the Swarm communication mode
 The Swarm Communication
 # First install
@@ -87,6 +83,15 @@ You can start the program by using
 
 
 
+
+# Troubleshooting
+If you make changes to the program and if you get 
+`Invalid desktop entry file: '/home/pi/Desktop/swarm.desktop'`
+you should do
+```
+chmod +x /home/pi/CubeSatSim/groundstation/MTU_swarm/swarm_packet.sh
+chmod +x /home/pi/Desktop/swarm.desktop
+```
 
 
 
