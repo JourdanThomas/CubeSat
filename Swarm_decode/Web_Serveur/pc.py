@@ -1,3 +1,16 @@
+# coding=utf-8
+
+#######################################################
+# MTU            pc.py
+# script to run the web server for the CubeSat Swarm project
+## This script sets up a Flask web server to serve data from the ground station,
+# allowing users to view data from multiple devices.
+#######################################################
+# made by Thomas Jourdan
+# 07/2025
+#######################################################
+
+
 import socket
 import threading
 from flask import Flask, jsonify, render_template

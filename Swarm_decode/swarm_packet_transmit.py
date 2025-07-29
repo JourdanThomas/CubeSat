@@ -142,7 +142,10 @@ def create_socket_connection(host_ip, port, max_retries=5):
 # Main function to handle connections and data transmission
 ######################################################################
 def main():
+
+    ####################################
     # Read configuration
+    ####################################
     cfg = read_config()
     if not cfg:
         print("Failed to read configuration. Exiting.")
@@ -159,16 +162,21 @@ def main():
 
     print(f"Starting transmission to {host_ip} for {device_count} devices")
     logging.info(f"Starting transmission to {host_ip} for {device_count} devices")
-
-    # First, send the configuration file
+    ####################################
+    # Send the configuration file
+    ####################################
     print("Sending configuration file...")
     if not send_config(host_ip):
         print("Failed to send configuration file. Continuing anyway...")
     else:
         print("Configuration file sent successfully!")
         # Wait a bit for the PC to process the config and start data receivers
-        time.sleep(2)
+        time.sleep(5)
 
+    ####################################
+    # Create sockets for each device
+    ####################################
+    print("Creating sockets for each device...")
     ports = get_ports(device_count)
     sockets = []
     
@@ -183,6 +191,9 @@ def main():
         print("No successful connections established. Exiting.")
         logging.error("No successful connections established")
         return
+    ####################################
+    # Create log files for each device
+    ####################################
 
     # Create log file paths and check if they exist
     log_files = [os.path.join(LOG_DIR, f"device_{i}.log") for i in range(device_count)]

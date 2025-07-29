@@ -16,7 +16,7 @@ rm -f /home/pi/CubeSatSim/groundstation/MTU_swarm_logs/device*
 
 echo
 echo "MTU Nimbus SWARM DECODE"
-echo "V1.11"
+echo "V1.20"
 
 
 sudo modprobe snd-aloop
@@ -58,7 +58,14 @@ if [ "$device_count" -eq 0 ]; then
 fi
 
 echo "Found $device_count RTL-SDR device(s)."
-
+#######################################################
+# Create (or empty) log files for each device
+#######################################################
+for ((i=0; i<device_count; i++)); do
+  log_file="/home/pi/CubeSatSim/groundstation/MTU_swarm_logs/device_${i}.log"
+  > "$log_file"
+done
+echo "log files created for each device."
 
 
 #######################################################
@@ -159,7 +166,7 @@ fi
 #######################################################
 # if APRS Create separate Direwolf config files for each device
 #######################################################
-#Create a config foler, should already exist 
+#Create a config folder, should already exist 
 if [[ "$mode" == "APRS" ]]; then
   mkdir -p /home/pi/direwolf
 
