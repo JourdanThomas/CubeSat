@@ -55,54 +55,53 @@
       </div>
 
       <div class="w3-row-padding">
-        <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-col l2 m6 w3-margin-bottom">
           <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">
-              Reaction Wheels
-            </div>
+            <div class="w3-display-topleft w3-black w3-padding">Reaction Wheels</div>
             <a href="/Reaction_Wheels">
-              <img
-                src="{{ url_for('static', filename='IMAGE/cubesat_with_reaction_wheels.jpg') }}"
-                alt="House"
-                style="width: 100%"
-              />
+              <img src="{{ url_for('static', filename='IMAGE/cubesat_with_reaction_wheels.jpg') }}" alt="House" class="project-img" />
             </a>
           </div>
         </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-col l2 m6 w3-margin-bottom">
           <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">
-              Wifi Communication
-            </div>
+            <div class="w3-display-topleft w3-black w3-padding">Wifi Communication</div>
             <a href="/Wifi_Communication">
-              <img src="{{ url_for('static', filename='IMAGE/Wifi.jpg') }}" alt="House" style="width: 100%" />
+              <img src="{{ url_for('static', filename='IMAGE/Wifi.jpg') }}" alt="House" class="project-img" />
             </a>
           </div>
         </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-col l2 m6 w3-margin-bottom">
           <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">
-              3D Visualisation
-            </div>
+            <div class="w3-display-topleft w3-black w3-padding">3D Visualisation</div>
             <a href="/3D_Visualisation">
-              <img
-                src="{{ url_for('static', filename='IMAGE/Visualisation.jpg') }}"
-                alt="House"
-                style="width: 100%"
-              />
+              <img src="{{ url_for('static', filename='IMAGE/Visualisation.jpg') }}" alt="House" class="project-img" />
             </a>
           </div>
         </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-col l2 m6 w3-margin-bottom">
           <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">
-              Meteor Detection
-            </div>
+            <div class="w3-display-topleft w3-black w3-padding">Meteor Detection</div>
             <a href="/Meteor_Detection">
-              <img src="{{ url_for('static', filename='IMAGE/meteor.jpg') }}" alt="House" style="width: 100%" />
+              <img src="{{ url_for('static', filename='IMAGE/meteor.jpg') }}" alt="House" class="project-img" />
             </a>
           </div>
         </div>
+        <div class="w3-col l2 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Live Status</div>
+            <a href="/Live_Status">
+              <img src="{{ url_for('static', filename='IMAGE/icone1.png') }}" alt="House" class="project-img" />
+            </a>
+          </div>
+        </div>
+        <style>
+          .project-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+          }
+        </style>
       </div>
 
       <!-- About Section -->
@@ -217,6 +216,44 @@
             </a>
           </p>
         </div>
+        <!-- Nouvelle ligne pour Thomas Jourdan et Chetouane M'hamed -->
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <a href="https://www.linkedin.com/in/amélie-castellano-205099255/">
+            <img
+              src="{{ url_for('static', filename='IMAGE/tjourdan.jpeg') }}"
+              alt="Amelie"
+              style="width: 100%"
+            />
+          </a>
+          <h3>Thomas Jourdan</h3>
+          <p class="w3-opacity">Intern Mines Saint-Etienne 2025</p>
+          <p>
+            A French student completing his 2nd-year internship at Nimbus for a
+            duration of 3 months as part of his engineering studies, with a
+            specialization in micro-electronics and embedded systems programming. Thomas'
+            engineering school is located in Saint-Etienne, France.
+          </p>
+
+          <p>
+            <a
+              href="mailto:thomas.jordan@etu.emse.fr?subject=Question%20Cubesat"
+            >
+              <button class="w3-button w3-light-grey w3-block">Contact</button>
+            </a>
+          </p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="{{ url_for('static', filename='IMAGE/mchetouane.jpg') }}" alt="Chetouane M'hamed" style="width: 100%" />
+          <h3>Chetouane M'hamed</h3>
+          <p class="w3-opacity">Intern Mines Saint-Etienne 2025</p>
+          <p>
+            An Algerian student completing his 2nd-year internship at Nimbus for a duration of 3 months as part of his engineering studies, with a specialization in aerospace and mechanical engineering. M'hamed's engineering school is located in Saint-Étienne, France.
+          <p>
+            <a href="mailto:mhamed.chetouane@etu.emse.fr?subject=Question%20Cubesat">
+              <button class="w3-button w3-light-grey w3-block">Contact</button>
+            </a>
+          </p>
+        </div>
       </div>
 
       <!-- Contact Section -->
@@ -266,21 +303,24 @@
       <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"></h3>
 
       <div>
-        <a href="https://nimbusgateway.ie/">
-        <img src="{{ url_for('static', filename='IMAGE/logo_nimbus.jpg') }}" alt="House" style="width: 19%"/>
+        <a href="https://nimbusgateway.ie/" target="_blank">
+        <img src="{{ url_for('static', filename='IMAGE/logo_nimbus.jpg') }}" alt="Nimbus" style="width: 16%"/>
         </a>
-        <a href="https://www.insa-rennes.fr/index.html">
-        <img src="{{ url_for('static', filename='IMAGE/logo_MTU.jpg') }}" alt="House" style="width: 19%"/>
+        <a href="https://www.mtu.ie/en/" target="_blank">
+        <img src="{{ url_for('static', filename='IMAGE/logo_MTU.jpg') }}" alt="MTU" style="width: 16%"/>
         </a>
-        <a href="https://eseo.fr/je-m-oriente/mon-campus/angers/">
-        <img src="{{ url_for('static', filename='IMAGE/logo_isen.jpg') }}" alt="House" style="width: 19%"/>
+        <a href="https://isen-brest.fr/fr/" target="_blank">
+        <img src="{{ url_for('static', filename='IMAGE/logo_isen.jpg') }}" alt="ISEN" style="width: 16%"/>
         </a>
-        <a href="https://eseo.fr/je-m-oriente/mon-campus/angers/">
-        <img src="{{ url_for('static', filename='IMAGE/logo_eseo.jpg') }}" alt="House" style="width: 19%"/>
+        <a href="https://eseo.fr/" target="_blank">
+        <img src="{{ url_for('static', filename='IMAGE/logo_eseo.jpg') }}" alt="ESEO" style="width: 16%"/>
         </a>
-        <a href="https://www.insa-rennes.fr">
-        <img src="{{ url_for('static', filename='IMAGE/logo_insa.jpg') }}" alt="House" style="width: 19%"/>
-       </a>
+        <a href="https://www.insa-rennes.fr/" target="_blank">
+        <img src="{{ url_for('static', filename='IMAGE/logo_insa.jpg') }}" alt="INSA" style="width: 16%"/>
+        </a>
+        <a href="https://www.mines-stetienne.fr/" target="_blank">
+        <img src="{{ url_for('static', filename='IMAGE/emselogopng.png') }}" alt="Mines Saint-Etienne" style="width: 16%"/>
+        </a>
     </div>
       <!-- End page content -->
     </div>

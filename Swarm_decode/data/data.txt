@@ -621,3 +621,1109 @@ device_1,MTU1-11 audio level = 35(11/10)   [NONE]   |||||____
 device_0,N 39 01.5700, W 077 04.3200
 device_0,hi hi BAT 0.00   0.0<0x20>
 device_1,[0.2] MTU1-11>APCSS:=3901.38N\07704.40WShi hi BAT 4.47  55.1 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.3800, W 077 04.4000
+device_0,MTU2-11 audio level = 35(12/11)   [NONE]   |||||||__
+device_1,hi hi BAT 4.47  55.1<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3901.57N\07704.32WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.5700, W 077 04.3200
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.38N\07704.40WShi hi BAT 4.47  49.1 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   |||||_|__
+device_1,N 39 01.3800, W 077 04.4000
+device_1,hi hi BAT 4.47  49.1<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3901.58N\07704.34WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.5800, W 077 04.3400
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   |||||____
+device_1,[0.2] MTU1-11>APCSS:=3901.37N\07704.41WShi hi BAT 4.47  52.8 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(13/11)   [NONE]   |||||||__
+device_1,N 39 01.3700, W 077 04.4100
+device_0,[0.3] MTU2-11>APCSS:=3901.58N\07704.34WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  52.8<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.5800, W 077 04.3400
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.37N\07704.41WShi hi BAT 4.47  50.5 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 44(10/11)   [NONE]   |||||____
+device_1,N 39 01.3700, W 077 04.4100
+device_1,hi hi BAT 4.47  50.5<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3901.57N\07704.33WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.5700, W 077 04.3300
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.36N\07704.40WShi hi BAT 4.47  58.4 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(12/12)   [NONE]   _||||_|__
+device_1,N 39 01.3600, W 077 04.4000
+device_1,hi hi BAT 4.47  58.4<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3901.57N\07704.33WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.5700, W 077 04.3300
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.36N\07704.40WShi hi BAT 4.47  78.2 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.3600, W 077 04.4000
+device_0,MTU2-11 audio level = 35(11/13)   [NONE]   ||||||___
+device_1,hi hi BAT 4.47  78.2<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3901.58N\07704.33WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   ||||||___
+device_0,N 39 01.5800, W 077 04.3300
+device_1,[0.2] MTU1-11>APCSS:=3901.37N\07704.38WShi hi BAT 4.47  49.8 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.3700, W 077 04.3800
+device_0,MTU2-11 audio level = 48(10/12)   [NONE]   :||||:___
+device_1,hi hi BAT 4.47  49.8<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3901.58N\07704.33WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.5800, W 077 04.3300
+device_1,MTU1-11 audio level = 35(10/11)   [NONE]   ||||||___
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.37N\07704.38WShi hi BAT 4.47  51.6 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   |||||||__
+device_1,N 39 01.3700, W 077 04.3800
+device_0,[0.3] MTU2-11>APCSS:=3901.57N\07704.35WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  51.6<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.5700, W 077 04.3500
+device_1,MTU1-11 audio level = 35(11/10)   [NONE]   ||||||___
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.39N\07704.40WShi hi BAT 4.47  50.4 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(12/11)   [NONE]   |||||____
+device_1,N 39 01.3900, W 077 04.4000
+device_1,hi hi BAT 4.47  50.4<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3901.57N\07704.35WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.5700, W 077 04.3500
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   |||||||__
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.39N\07704.40WShi hi BAT 4.47  83.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.3900, W 077 04.4000
+device_0,MTU2-11 audio level = 35(12/12)   [NONE]   |||||||__
+device_0,[0.3] MTU2-11>APCSS:=3901.58N\07704.33WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  83.0<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.5800, W 077 04.3300
+device_1,MTU1-11 audio level = 35(10/13)   [NONE]   ||||||___
+device_1,[0.2] MTU1-11>APCSS:=3901.39N\07704.38WShi hi BAT 4.47  54.0 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.3900, W 077 04.3800
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||_|__
+device_1,hi hi BAT 4.47  54.0<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3901.58N\07704.35WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(12/13)   [NONE]   ||||||___
+device_0,N 39 01.5800, W 077 04.3500
+device_1,[0.2] MTU1-11>APCSS:=3901.39N\07704.38WShi hi BAT 4.47  52.5 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.3900, W 077 04.3800
+device_0,MTU2-11 audio level = 35(10/12)   [NONE]   |||||_|__
+device_1,hi hi BAT 4.47  52.5<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3901.58N\07704.35WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(12/13)   [NONE]   |||||||__
+device_0,N 39 01.5800, W 077 04.3500
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.40N\07704.39WShi hi BAT 4.47  50.6 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(10/11)   [NONE]   ||||||___
+device_1,N 39 01.4000, W 077 04.3900
+device_0,[0.2] MTU2-11>APCSS:=3901.59N\07704.35WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  50.6<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.5900, W 077 04.3500
+device_1,MTU1-11 audio level = 35(13/11)   [NONE]   |||||||__
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.40N\07704.39WShi hi BAT 4.47  55.5 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   ||||||___
+device_1,N 39 01.4000, W 077 04.3900
+device_0,[0.2] MTU2-11>APCSS:=3901.59N\07704.35WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  55.5<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 34(11/12)   [NONE]   |||||||__
+device_0,N 39 01.5900, W 077 04.3500
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.42N\07704.41WShi hi BAT 4.47  51.7 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+N 39 01.4200, W 077 04.4100
+hi hi BAT 4.47  51.7<0x20>
+device_0,MTU2-11 audio level = 35(12/14)   [NONE]   |||||||__
+device_0,[0.3] MTU2-11>APCSS:=3902.01N\07704.35WShi hi BAT 0.00   0.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_0,N 39 02.0100, W 077 04.3500
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.42N\07704.41WShi hi BAT 4.47  56.8 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4200, W 077 04.4100
+device_0,MTU2-11 audio level = 35(10/11)   [NONE]   |||||____
+device_0,[0.2] MTU2-11>APCSS:=3902.01N\07704.35WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  56.8<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0100, W 077 04.3500
+device_1,MTU1-11 audio level = 35(13/11)   [NONE]   |||||____
+device_1,[0.2] MTU1-11>APCSS:=3901.42N\07704.40WShi hi BAT 4.47  52.7 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(14/11)   [NONE]   |||||||__
+device_1,N 39 01.4200, W 077 04.4000
+device_1,hi hi BAT 4.47  52.7<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3901.59N\07704.36WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.5900, W 077 04.3600
+device_1,MTU1-11 audio level = 35(10/11)   [NONE]   |||||_|__
+device_1,[0.2] MTU1-11>APCSS:=3901.42N\07704.40WShi hi BAT 4.47  52.8 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4200, W 077 04.4000
+device_0,MTU2-11 audio level = 35(11/10)   [NONE]   |||||||__
+device_0,[0.3] MTU2-11>APCSS:=3901.59N\07704.36WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  52.8<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(10/11)   [NONE]   |||||||__
+device_0,N 39 01.5900, W 077 04.3600
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.42N\07704.40WShi hi BAT 4.47  52.6 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,N 39 01.4200, W 077 04.4000
+device_1,hi hi BAT 4.47  52.6<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3901.59N\07704.34WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.5900, W 077 04.3400
+device_1,MTU1-11 audio level = 36(13/12)   [NONE]   |||||||__
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.42N\07704.40WShi hi BAT 4.47  52.3 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4200, W 077 04.4000
+device_0,MTU2-11 audio level = 35(10/11)   [NONE]   ||||||___
+device_1,hi hi BAT 4.47  52.3<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3901.59N\07704.34WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.5900, W 077 04.3400
+device_1,MTU1-11 audio level = 35(12/11)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.42N\07704.40WShi hi BAT 4.47  52.7 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(12/12)   [NONE]   |||||____
+device_1,N 39 01.4200, W 077 04.4000
+device_0,[0.2] MTU2-11>APCSS:=3901.57N\07704.34WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  52.7<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_0,N 39 01.5700, W 077 04.3400
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.42N\07704.40WShi hi BAT 4.47  62.9 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,N 39 01.4200, W 077 04.4000
+device_1,hi hi BAT 4.47  62.9<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3901.57N\07704.34WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.5700, W 077 04.3400
+device_1,MTU1-11 audio level = 35(12/11)   [NONE]   |||||||__
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.40N\07704.41WShi hi BAT 4.47  56.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/10)   [NONE]   |||||||__
+device_1,N 39 01.4000, W 077 04.4100
+device_0,[0.3] MTU2-11>APCSS:=3901.59N\07704.34WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  56.0<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(12/10)   [NONE]   |||||||__
+device_0,N 39 01.5900, W 077 04.3400
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.40N\07704.41WShi hi BAT 4.47  54.4 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(12/12)   [NONE]   |||||____
+device_0,[0.2] MTU2-11>APCSS:=3901.59N\07704.34WShi hi BAT 0.00   0.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4000, W 077 04.4100
+hi hi BAT 4.47  54.4<0x20>
+device_0,N 39 01.5900, W 077 04.3400
+hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(12/10)   [NONE]   |||||||__
+[0.3] MTU1-11>APCSS:=3901.42N\07704.42WShi hi BAT 4.47  49.8 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/13)   [NONE]   |||||||__
+device_1,N 39 01.4200, W 077 04.4200
+device_1,hi hi BAT 4.47  49.8<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3902.01N\07704.33WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0100, W 077 04.3300
+device_1,MTU1-11 audio level = 35(10/13)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.42N\07704.42WShi hi BAT 4.47  53.2 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(13/11)   [NONE]   |||||||__
+device_1,N 39 01.4200, W 077 04.4200
+device_1,hi hi BAT 4.47  53.2<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3902.01N\07704.33WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0100, W 077 04.3300
+device_1,MTU1-11 audio level = 35(11/10)   [NONE]   ||||||___
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.41N\07704.42WShi hi BAT 4.47  21.9 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(12/11)   [NONE]   |||||||__
+device_1,N 39 01.4100, W 077 04.4200
+hi hi BAT 4.47  21.9<0x20>
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.41N\07704.42WShi hi BAT 4.47  20.5 <0x0a>
+device_0,[0.3] MTU2-11>APCSS:=3902.01N\07704.32WShi hi BAT 0.00   0.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+N 39 02.0100, W 077 04.3200
+hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(10/11)   [NONE]   |||||||__
+device_0,[0.3] MTU2-11>APCSS:=3902.01N\07704.32WShi hi BAT 0.00   0.0 <0x0a>
+device_1,N 39 01.4100, W 077 04.4200
+hi hi BAT 4.47  20.5<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0100, W 077 04.3200
+device_1,MTU1-11 audio level = 35(12/10)   [NONE]   ||||||___
+device_1,[0.2] MTU1-11>APCSS:=3901.42N\07704.43WShi hi BAT 4.47  20.1 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,N 39 01.4200, W 077 04.4300
+device_0,[0.3] MTU2-11>APCSS:=3902.02N\07704.31WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  20.1<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0200, W 077 04.3100
+device_1,MTU1-11 audio level = 35(11/13)   [NONE]   |||||____
+device_1,[0.2] MTU1-11>APCSS:=3901.42N\07704.43WShi hi BAT 4.47  24.4 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   |||||||__
+device_1,N 39 01.4200, W 077 04.4300
+device_0,[0.3] MTU2-11>APCSS:=3902.02N\07704.31WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  24.4<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   ||||||___
+device_0,N 39 02.0200, W 077 04.3100
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.44N\07704.41WShi hi BAT 4.47  20.2 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 33(11/12)   [NONE]   |||||||__
+device_1,N 39 01.4400, W 077 04.4100
+device_1,hi hi BAT 4.47  20.2<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3902.04N\07704.30WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0400, W 077 04.3000
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.44N\07704.41WShi hi BAT 4.47  21.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4400, W 077 04.4100
+device_0,MTU2-11 audio level = 35(11/10)   [NONE]   |||||||__
+device_1,hi hi BAT 4.47  21.0<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3902.04N\07704.30WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0400, W 077 04.3000
+device_1,MTU1-11 audio level = 35(12/11)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.45N\07704.41WShi hi BAT 4.47  23.3 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4500, W 077 04.4100
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_0,[0.3] MTU2-11>APCSS:=3902.03N\07704.32WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  23.3<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0300, W 077 04.3200
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(13/10)   [NONE]   |||||||__
+[0.3] MTU1-11>APCSS:=3901.45N\07704.41WShi hi BAT 4.46  66.9 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4500, W 077 04.4100
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_0,[0.3] MTU2-11>APCSS:=3902.03N\07704.32WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.46  66.9<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||____
+device_0,N 39 02.0300, W 077 04.3200
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.41WShi hi BAT 4.47  22.1 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4600, W 077 04.4100
+device_0,MTU2-11 audio level = 35(12/13)   [NONE]   ||||||___
+device_1,hi hi BAT 4.47  22.1<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3902.04N\07704.32WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0400, W 077 04.3200
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.46N\07704.41WShi hi BAT 4.47  41.8 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4600, W 077 04.4100
+device_0,MTU2-11 audio level = 35(10/12)   [NONE]   |||||_|__
+device_1,hi hi BAT 4.47  41.8<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3902.04N\07704.32WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0400, W 077 04.3200
+device_1,MTU1-11 audio level = 35(13/13)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.44N\07704.41WShi hi BAT 4.47  21.1 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4400, W 077 04.4100
+device_0,MTU2-11 audio level = 35(12/11)   [NONE]   |||||____
+device_0,[0.2] MTU2-11>APCSS:=3902.05N\07704.30WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  21.1<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_0,N 39 02.0500, W 077 04.3000
+device_1,[0.2] MTU1-11>APCSS:=3901.44N\07704.41WShi hi BAT 4.47  20.6 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4400, W 077 04.4100
+device_0,[0.3] MTU2-11>APCSS:=3902.05N\07704.30WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  20.6<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0500, W 077 04.3000
+device_1,MTU1-11 audio level = 36(12/11)   [NONE]   ||||||___
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.41WShi hi BAT 4.47  20.6 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/10)   [NONE]   ||||||___
+device_1,N 39 01.4600, W 077 04.4100
+device_1,hi hi BAT 4.47  20.6<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3902.05N\07704.32WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(10/12)   [NONE]   |||||_|__
+device_0,N 39 02.0500, W 077 04.3200
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.41WShi hi BAT 4.47  21.7 <0x0a>
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   |||||||__
+[0.3] MTU2-11>APCSS:=3902.05N\07704.32WShi hi BAT 0.00   0.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_1,Position, Satellite/Pacsat, Cellular applications
+N 39 01.4600, W 077 04.4100
+hi hi BAT 4.47  21.7<0x20>
+device_0,N 39 02.0500, W 077 04.3200
+hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(10/12)   [NONE]   |||||_|__
+[0.2] MTU1-11>APCSS:=3901.45N\07704.41WShi hi BAT 4.47  22.6 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(10/11)   [NONE]   |||||||__
+device_1,N 39 01.4500, W 077 04.4100
+device_0,[0.3] MTU2-11>APCSS:=3902.05N\07704.31WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  22.6<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(13/11)   [NONE]   |||||____
+device_0,N 39 02.0500, W 077 04.3100
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.45N\07704.41WShi hi BAT 4.46  90.6 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(10/12)   [NONE]   |||||||__
+device_1,N 39 01.4500, W 077 04.4100
+device_1,hi hi BAT 4.46  90.6<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3902.05N\07704.31WShi hi BAT 0.00   0.0 <0x0a>
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_0,Position, Satellite/Pacsat, Cellular applications
+N 39 02.0500, W 077 04.3100
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.39WShi hi BAT 4.47  25.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4600, W 077 04.3900
+device_0,MTU2-11 audio level = 35(12/11)   [NONE]   ||||||___
+device_0,[0.2] MTU2-11>APCSS:=3902.06N\07704.30WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  25.0<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   |||||||__
+device_0,N 39 02.0600, W 077 04.3000
+hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.46N\07704.39WShi hi BAT 4.47  21.5 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(12/10)   [NONE]   |||||||__
+device_1,N 39 01.4600, W 077 04.3900
+device_0,[0.3] MTU2-11>APCSS:=3902.06N\07704.30WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  21.5<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0600, W 077 04.3000
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   |||||_|__
+device_1,[0.2] MTU1-11>APCSS:=3901.47N\07704.38WShi hi BAT 4.47  22.6 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4700, W 077 04.3800
+device_0,MTU2-11 audio level = 35(12/12)   [NONE]   |||||||__
+device_1,hi hi BAT 4.47  22.6<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3902.06N\07704.28WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   |||||||__
+device_0,N 39 02.0600, W 077 04.2800
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.47N\07704.38WShi hi BAT 4.47  24.9 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4700, W 077 04.3800
+device_0,MTU2-11 audio level = 35(12/12)   [NONE]   ||||||___
+device_1,hi hi BAT 4.47  24.9<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3902.06N\07704.28WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0600, W 077 04.2800
+device_1,MTU1-11 audio level = 35(12/12)   [NONE]   ||||||___
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.47N\07704.36WShi hi BAT 4.47  21.6 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4700, W 077 04.3600
+device_0,MTU2-11 audio level = 35(10/11)   [NONE]   ||||||___
+device_1,hi hi BAT 4.47  21.6<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3902.08N\07704.28WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0800, W 077 04.2800
+device_1,MTU1-11 audio level = 35(13/12)   [NONE]   ||||||___
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.47N\07704.36WShi hi BAT 4.47  21.1 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4700, W 077 04.3600
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   ||||||___
+device_0,[0.2] MTU2-11>APCSS:=3902.08N\07704.28WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  21.1<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0800, W 077 04.2800
+device_1,MTU1-11 audio level = 35(12/12)   [NONE]   |||||____
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.47N\07704.34WShi hi BAT 4.47  27.6 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4700, W 077 04.3400
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_0,[0.2] MTU2-11>APCSS:=3902.09N\07704.27WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  27.6<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0900, W 077 04.2700
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   ||||||___
+device_1,[0.2] MTU1-11>APCSS:=3901.47N\07704.34WShi hi BAT 4.47  21.8 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4700, W 077 04.3400
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||____
+device_0,[0.2] MTU2-11>APCSS:=3902.09N\07704.27WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  21.8<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_0,N 39 02.0900, W 077 04.2700
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.34WShi hi BAT 4.47  21.3 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(10/11)   [NONE]   ||||||___
+device_1,N 39 01.4600, W 077 04.3400
+device_1,hi hi BAT 4.47  21.3<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3902.09N\07704.27WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(12/10)   [NONE]   ||||||___
+device_0,N 39 02.0900, W 077 04.2700
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.34WShi hi BAT 4.47  80.7 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||____
+device_1,N 39 01.4600, W 077 04.3400
+device_0,[0.2] MTU2-11>APCSS:=3902.09N\07704.27WShi hi BAT 0.00   0.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_1,hi hi BAT 4.47  80.7<0x20>
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   |||||____
+[0.2] MTU1-11>APCSS:=3901.46N\07704.33WShi hi BAT 4.47  26.8 <0x0a>
+device_0,N 39 02.0900, W 077 04.2700
+hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(10/10)   [NONE]   |||||||__
+device_1,N 39 01.4600, W 077 04.3300
+device_0,[0.3] MTU2-11>APCSS:=3902.11N\07704.26WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  26.8<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||_|__
+device_0,N 39 02.1100, W 077 04.2600
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.33WShi hi BAT 4.47  21.2 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4600, W 077 04.3300
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   |||||||__
+device_0,[0.3] MTU2-11>APCSS:=3902.11N\07704.26WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  21.2<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.1100, W 077 04.2600
+device_1,MTU1-11 audio level = 35(11/10)   [NONE]   |||||||__
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.47N\07704.35WShi hi BAT 4.47  79.8 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4700, W 077 04.3500
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||____
+device_1,hi hi BAT 4.47  79.8<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3902.13N\07704.26WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(12/11)   [NONE]   |||||_|__
+device_0,N 39 02.1300, W 077 04.2600
+device_1,[0.2] MTU1-11>APCSS:=3901.47N\07704.35WShi hi BAT 4.47  22.1 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(10/11)   [NONE]   |||||||__
+device_1,N 39 01.4700, W 077 04.3500
+hi hi BAT 4.47  22.1<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3902.13N\07704.26WShi hi BAT 0.00   0.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   ||||||___
+device_0,N 39 02.1300, W 077 04.2600
+device_1,[0.2] MTU1-11>APCSS:=3901.48N\07704.35WShi hi BAT 4.47  54.3 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4800, W 077 04.3500
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   |||||____
+device_0,[0.2] MTU2-11>APCSS:=3902.13N\07704.25WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  54.3<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.1300, W 077 04.2500
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.48N\07704.35WShi hi BAT 4.47  24.9 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,N 39 01.4800, W 077 04.3500
+device_1,hi hi BAT 4.47  24.9<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3902.13N\07704.25WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.1300, W 077 04.2500
+device_1,MTU1-11 audio level = 35(11/13)   [NONE]   ||||||___
+device_1,[0.2] MTU1-11>APCSS:=3901.47N\07704.36WShi hi BAT 4.47  23.5 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,N 39 01.4700, W 077 04.3600
+device_1,hi hi BAT 4.47  23.5<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3902.11N\07704.26WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 34(12/11)   [NONE]   |||||||__
+device_0,N 39 02.1100, W 077 04.2600
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.47N\07704.36WShi hi BAT 4.47  56.3 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4700, W 077 04.3600
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,hi hi BAT 4.47  56.3<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3902.11N\07704.26WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.1100, W 077 04.2600
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.37WShi hi BAT 4.46  79.3 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4600, W 077 04.3700
+device_0,MTU2-11 audio level = 35(13/11)   [NONE]   ||||||___
+device_0,[0.2] MTU2-11>APCSS:=3902.10N\07704.25WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.46  79.3<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_0,N 39 02.1000, W 077 04.2500
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.37WShi hi BAT 4.47  51.1 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(12/11)   [NONE]   |||||_|__
+[0.2] MTU2-11>APCSS:=3902.10N\07704.25WShi hi BAT 0.00   0.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4600, W 077 04.3700
+hi hi BAT 4.47  51.1<0x20>
+device_0,N 39 02.1000, W 077 04.2500
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   ||||||___
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.36WShi hi BAT 4.47  62.3 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/13)   [NONE]   |||||||__
+device_1,N 39 01.4600, W 077 04.3600
+device_1,hi hi BAT 4.47  62.3<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3902.09N\07704.24WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.0900, W 077 04.2400
+device_1,MTU1-11 audio level = 35(10/12)   [NONE]   ||||||___
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.36WShi hi BAT 4.47  56.1 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4600, W 077 04.3600
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   _||||||__
+device_0,[0.3] MTU2-11>APCSS:=3902.09N\07704.24WShi hi BAT 0.00   0.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+N 39 02.0900, W 077 04.2400
+device_1,hi hi BAT 4.47  56.1<0x20>
+MTU1-11 audio level = 35(12/10)   [NONE]   ||||||___
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.36WShi hi BAT 4.47  80.4 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(13/12)   [NONE]   ||||||___
+device_1,N 39 01.4600, W 077 04.3600
+device_1,hi hi BAT 4.47  80.4<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3902.10N\07704.22WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/13)   [NONE]   |||||____
+device_0,N 39 02.1000, W 077 04.2200
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.36WShi hi BAT 4.47  52.9 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   |||||____
+device_1,N 39 01.4600, W 077 04.3600
+device_0,[0.2] MTU2-11>APCSS:=3902.10N\07704.22WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  52.9<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_0,N 39 02.1000, W 077 04.2200
+device_1,[0.2] MTU1-11>APCSS:=3901.47N\07704.35WShi hi BAT 4.47  59.0 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/10)   [NONE]   |||||||__
+device_1,N 39 01.4700, W 077 04.3500
+device_0,[0.3] MTU2-11>APCSS:=3902.11N\07704.22WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  59.0<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/13)   [NONE]   |||||||__
+device_0,N 39 02.1100, W 077 04.2200
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.47N\07704.35WShi hi BAT 4.47  57.5 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   ||||||___
+device_1,N 39 01.4700, W 077 04.3500
+device_0,[0.2] MTU2-11>APCSS:=3902.11N\07704.22WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  57.5<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_0,N 39 02.1100, W 077 04.2200
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.48N\07704.35WShi hi BAT 4.47  52.6 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4800, W 077 04.3500
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_0,[0.3] MTU2-11>APCSS:=3902.12N\07704.22WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  52.6<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_0,N 39 02.1200, W 077 04.2200
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.3] MTU1-11>APCSS:=3901.48N\07704.35WShi hi BAT 4.47  59.4 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(12/11)   [NONE]   |||||||__
+device_1,N 39 01.4800, W 077 04.3500
+device_1,hi hi BAT 4.47  59.4<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3902.12N\07704.22WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.1200, W 077 04.2200
+device_1,MTU1-11 audio level = 35(11/10)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.46N\07704.33WShi hi BAT 4.47  53.2 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(10/10)   [NONE]   |||||||__
+device_1,N 39 01.4600, W 077 04.3300
+hi hi BAT 4.47  53.2<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3902.10N\07704.20WShi hi BAT 0.00   0.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(13/12)   [NONE]   |||||____
+[0.2] MTU1-11>APCSS:=3901.46N\07704.33WShi hi BAT 4.47  54.7 <0x0a>
+device_0,N 39 02.1000, W 077 04.2000
+hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   ||||||___
+device_1,N 39 01.4600, W 077 04.3300
+device_1,hi hi BAT 4.47  54.7<0x20>
+device_0,[0.2] MTU2-11>APCSS:=3902.10N\07704.20WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.1000, W 077 04.2000
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_1,[0.2] MTU1-11>APCSS:=3901.47N\07704.33WShi hi BAT 4.47  66.3 <0x0a>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 34(12/12)   [NONE]   |||||||__
+device_1,N 39 01.4700, W 077 04.3300
+device_0,[0.3] MTU2-11>APCSS:=3902.10N\07704.20WShi hi BAT 0.00   0.0 <0x0a>
+device_1,hi hi BAT 4.47  66.3<0x20>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 02.1000, W 077 04.2000
+device_1,MTU1-11 audio level = 35(13/11)   [NONE]   ||||||___
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,[0.2] MTU1-11>APCSS:=3901.47N\07704.33WShi hi BAT 4.47  54.8 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,AMSAT-11 audio level = 19(10/10)   [NONE]   _||||||__
+device_1,N 39 01.4700, W 077 04.3300
+device_0,[0.3] AMSAT-11>APCSS:010101/hi hi <0x0a>
+device_1,hi hi BAT 4.47  54.8<0x20>
+device_0,Unknown APRS Data Type Indicator "0", Original Balloon (think Ham b, Cellular applications
+device_1,MTU1-11 audio level = 35(10/11)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.47N\07704.34WShi hi BAT 4.47  52.9 <0x0a>
+device_0,MTU2-11 audio level = 33(11/11)   [NONE]   ||||||___
+device_0,[0.2] MTU2-11>APCSS:=3901.39N\07704.41WShi hi BAT 0.00   0.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4700, W 077 04.3400
+device_0,N 39 01.3900, W 077 04.4100
+device_1,hi hi BAT 4.47  52.9<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(10/11)   [NONE]   ||||||___
+device_1,[0.2] MTU1-11>APCSS:=3901.47N\07704.34WShi hi BAT 4.47  52.7 <0x0a>
+device_0,MTU2-11 audio level = 35(10/11)   [NONE]   |||||____
+device_0,[0.2] MTU2-11>APCSS:=3901.38N\07704.40WShi hi BAT 0.00   0.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4700, W 077 04.3400
+device_0,N 39 01.3800, W 077 04.4000
+device_1,hi hi BAT 4.47  52.7<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(10/10)   [NONE]   ||||||___
+device_1,[0.2] MTU1-11>APCSS:=3901.48N\07704.33WShi hi BAT 4.47  52.8 <0x0a>
+device_0,MTU2-11 audio level = 35(12/11)   [NONE]   |||||||__
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.3] MTU2-11>APCSS:=3901.38N\07704.40WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4800, W 077 04.3300
+device_0,N 39 01.3800, W 077 04.4000
+device_1,hi hi BAT 4.47  52.8<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_0,MTU2-11 audio level = 35(12/12)   [NONE]   |||||||__
+device_0,[0.3] MTU2-11>APCSS:=3901.37N\07704.41WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(12/11)   [NONE]   |||||||__
+[0.3] MTU1-11>APCSS:=3901.48N\07704.33WShi hi BAT 4.47  84.7 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.3700, W 077 04.4100
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,N 39 01.4800, W 077 04.3300
+hi hi BAT 4.47  84.7<0x20>
+device_1,MTU1-11 audio level = 35(12/11)   [NONE]   |||||_|__
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   |||||||__
+device_1,[0.2] MTU1-11>APCSS:=3901.47N\07704.33WShi hi BAT 4.47  51.9 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.3] MTU2-11>APCSS:=3901.37N\07704.41WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4700, W 077 04.3300
+device_1,hi hi BAT 4.47  51.9<0x20>
+device_0,N 39 01.3700, W 077 04.4100
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.47N\07704.33WShi hi BAT 4.47  51.3 <0x0a>
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   |||||____
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.2] MTU2-11>APCSS:=3901.36N\07704.40WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4700, W 077 04.3300
+device_1,hi hi BAT 4.47  51.3<0x20>
+device_0,N 39 01.3600, W 077 04.4000
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(10/12)   [NONE]   |||||_|__
+device_0,MTU2-11 audio level = 35(12/12)   [NONE]   ||||||___
+device_1,[0.2] MTU1-11>APCSS:=3901.45N\07704.31WShi hi BAT 4.47  53.9 <0x0a>
+device_0,[0.2] MTU2-11>APCSS:=3901.36N\07704.40WShi hi BAT 0.00   0.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4500, W 077 04.3100
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.3600, W 077 04.4000
+device_1,hi hi BAT 4.47  53.9<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_0,MTU2-11 audio level = 35(10/11)   [NONE]   |||||____
+device_0,[0.2] MTU2-11>APCSS:=3901.37N\07704.38WShi hi BAT 0.00   0.0 <0x0a>
+device_1,[0.3] MTU1-11>APCSS:=3901.45N\07704.31WShi hi BAT 4.47  54.9 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4500, W 077 04.3100
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.3700, W 077 04.3800
+device_1,hi hi BAT 4.47  54.9<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(13/11)   [NONE]   |||||||__
+device_0,MTU2-11 audio level = 35(12/10)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.46N\07704.33WShi hi BAT 4.47  54.1 <0x0a>
+device_0,[0.3] MTU2-11>APCSS:=3901.37N\07704.38WShi hi BAT 0.00   0.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4600, W 077 04.3300
+device_0,N 39 01.3700, W 077 04.3800
+device_1,hi hi BAT 4.47  54.1<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_0,MTU2-11 audio level = 35(12/11)   [NONE]   _||||_|__
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.33WShi hi BAT 4.47  58.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+N 39 01.4600, W 077 04.3300
+hi hi BAT 4.47  58.0<0x20>
+device_0,[0.3] MTU2-11>APCSS:=3901.39N\07704.40WShi hi BAT 0.00   0.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.3900, W 077 04.4000
+hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(11/13)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.46N\07704.32WShi hi BAT 4.47  54.3 <0x0a>
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.2] MTU2-11>APCSS:=3901.39N\07704.40WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4600, W 077 04.3200
+device_0,N 39 01.3900, W 077 04.4000
+device_1,hi hi BAT 4.47  54.3<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(12/12)   [NONE]   ||||||___
+device_0,MTU2-11 audio level = 35(12/11)   [NONE]   |||||||__
+device_1,[0.2] MTU1-11>APCSS:=3901.46N\07704.32WShi hi BAT 4.47  54.2 <0x0a>
+device_0,[0.3] MTU2-11>APCSS:=3901.39N\07704.38WShi hi BAT 0.00   0.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4600, W 077 04.3200
+device_0,N 39 01.3900, W 077 04.3800
+device_1,hi hi BAT 4.47  54.2<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(12/11)   [NONE]   |||||||:_
+device_1,[0.3] MTU1-11>APCSS:=3901.45N\07704.32WShi hi BAT 4.47  54.5 <0x0a>
+device_0,MTU2-11 audio level = 35(11/13)   [NONE]   ||||||___
+device_0,[0.2] MTU2-11>APCSS:=3901.39N\07704.38WShi hi BAT 0.00   0.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4500, W 077 04.3200
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.3900, W 077 04.3800
+device_1,hi hi BAT 4.47  54.5<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(12/11)   [NONE]   |||||____
+device_1,[0.2] MTU1-11>APCSS:=3901.45N\07704.32WShi hi BAT 4.47  52.8 <0x0a>
+device_0,MTU2-11 audio level = 35(10/11)   [NONE]   ||||||___
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.2] MTU2-11>APCSS:=3901.40N\07704.39WShi hi BAT 0.00   0.0 <0x0a>
+device_1,N 39 01.4500, W 077 04.3200
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,hi hi BAT 4.47  52.8<0x20>
+device_0,N 39 01.4000, W 077 04.3900
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.43N\07704.33WShi hi BAT 4.47  77.4 <0x0a>
+device_0,[0.3] MTU2-11>APCSS:=3901.40N\07704.39WShi hi BAT 0.00   0.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4300, W 077 04.3300
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.4000, W 077 04.3900
+device_1,hi hi BAT 4.47  77.4<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   |||||____
+device_1,[0.2] MTU1-11>APCSS:=3901.43N\07704.33WShi hi BAT 4.47  56.0 <0x0a>
+device_0,MTU2-11 audio level = 35(10/11)   [NONE]   ||||||___
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.2] MTU2-11>APCSS:=3901.42N\07704.41WShi hi BAT 0.00   0.0 <0x0a>
+device_1,N 39 01.4300, W 077 04.3300
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.4200, W 077 04.4100
+device_1,hi hi BAT 4.47  56.0<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,[0.2] MTU1-11>APCSS:=3901.44N\07704.33WShi hi BAT 4.47  88.7 <0x0a>
+device_0,[0.3] MTU2-11>APCSS:=3901.42N\07704.41WShi hi BAT 0.00   0.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4400, W 077 04.3300
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.4200, W 077 04.4100
+device_1,hi hi BAT 4.47  88.7<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(10/12)   [NONE]   ||||||___
+device_0,MTU2-11 audio level = 35(9/11)   [NONE]   ||||||___
+device_1,[0.2] MTU1-11>APCSS:=3901.44N\07704.33WShi hi BAT 4.47  78.1 <0x0a>
+device_0,[0.2] MTU2-11>APCSS:=3901.42N\07704.40WShi hi BAT 0.00   0.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4400, W 077 04.3300
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,hi hi BAT 4.47  78.1<0x20>
+device_0,N 39 01.4200, W 077 04.4000
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(12/12)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.45N\07704.32WShi hi BAT 4.47  59.3 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+N 39 01.4500, W 077 04.3200
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   |||||||__
+[0.3] MTU2-11>APCSS:=3901.42N\07704.40WShi hi BAT 0.00   0.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.4200, W 077 04.4000
+device_1,hi hi BAT 4.47  59.3<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   ||||||___
+device_1,[0.2] MTU1-11>APCSS:=3901.45N\07704.32WShi hi BAT 4.47  55.0 <0x0a>
+device_0,MTU2-11 audio level = 35(10/12)   [NONE]   |||||||__
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.3] MTU2-11>APCSS:=3901.42N\07704.40WShi hi BAT 0.00   0.0 <0x0a>
+device_1,N 39 01.4500, W 077 04.3200
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,hi hi BAT 4.47  55.0<0x20>
+device_0,N 39 01.4200, W 077 04.4000
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||_|__
+device_1,[0.2] MTU1-11>APCSS:=3901.44N\07704.32WShi hi BAT 4.47  52.7 <0x0a>
+device_0,MTU2-11 audio level = 35(10/11)   [NONE]   ||||||___
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.2] MTU2-11>APCSS:=3901.42N\07704.40WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4400, W 077 04.3200
+device_0,N 39 01.4200, W 077 04.4000
+hi hi BAT 0.00   0.0<0x20>
+device_1,hi hi BAT 4.47  52.7<0x20>
+device_0,MTU2-11 audio level = 35(11/10)   [NONE]   |||||||__
+device_1,MTU1-11 audio level = 35(12/11)   [NONE]   ||||||___
+device_1,[0.2] MTU1-11>APCSS:=3901.44N\07704.32WShi hi BAT 4.47  55.1 <0x0a>
+device_0,[0.3] MTU2-11>APCSS:=3901.42N\07704.40WShi hi BAT 0.00   0.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4400, W 077 04.3200
+device_1,hi hi BAT 4.47  55.1<0x20>
+device_0,N 39 01.4200, W 077 04.4000
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(12/12)   [NONE]   |||||||__
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   ||||||___
+device_1,[0.3] MTU1-11>APCSS:=3901.44N\07704.34WShi hi BAT 4.47  52.2 <0x0a>
+device_0,[0.2] MTU2-11>APCSS:=3901.42N\07704.40WShi hi BAT 0.00   0.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4400, W 077 04.3400
+device_1,hi hi BAT 4.47  52.2<0x20>
+device_0,N 39 01.4200, W 077 04.4000
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_1,[0.3] MTU1-11>APCSS:=3901.44N\07704.34WShi hi BAT 4.47  54.8 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.2] MTU2-11>APCSS:=3901.40N\07704.41WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4400, W 077 04.3400
+device_1,hi hi BAT 4.47  54.8<0x20>
+device_0,N 39 01.4000, W 077 04.4100
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||____
+[0.2] MTU2-11>APCSS:=3901.40N\07704.41WShi hi BAT 0.00   0.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+[0.3] MTU1-11>APCSS:=3901.44N\07704.32WShi hi BAT 4.47  54.9 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4400, W 077 04.3200
+hi hi BAT 4.47  54.9<0x20>
+device_0,N 39 01.4000, W 077 04.4100
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(10/11)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.44N\07704.32WShi hi BAT 4.47  52.2 <0x0a>
+device_0,MTU2-11 audio level = 35(12/11)   [NONE]   |||||||__
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.3] MTU2-11>APCSS:=3901.42N\07704.42WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4400, W 077 04.3200
+device_0,N 39 01.4200, W 077 04.4200
+device_1,hi hi BAT 4.47  52.2<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(10/12)   [NONE]   |||||||__
+device_0,MTU2-11 audio level = 35(10/12)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.42N\07704.32WShi hi BAT 4.47  58.6 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_0,[0.3] MTU2-11>APCSS:=3901.42N\07704.42WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4200, W 077 04.3200
+device_0,N 39 01.4200, W 077 04.4200
+hi hi BAT 0.00   0.0<0x20>
+device_1,hi hi BAT 4.47  58.6<0x20>
+device_1,MTU1-11 audio level = 35(12/12)   [NONE]   ||||||___
+device_0,MTU2-11 audio level = 35(11/12)   [NONE]   ||||||:__
+device_1,[0.2] MTU1-11>APCSS:=3901.42N\07704.32WShi hi BAT 4.47  52.3 <0x0a>
+device_0,[0.3] MTU2-11>APCSS:=3901.41N\07704.42WShi hi BAT 0.00   0.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4200, W 077 04.3200
+device_0,N 39 01.4100, W 077 04.4200
+device_1,hi hi BAT 4.47  52.3<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(12/11)   [NONE]   |||||||__
+device_0,MTU2-11 audio level = 35(12/11)   [NONE]   ||||||___
+device_1,[0.3] MTU1-11>APCSS:=3901.41N\07704.33WShi hi BAT 4.47  52.9 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.2] MTU2-11>APCSS:=3901.41N\07704.42WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4100, W 077 04.3300
+device_0,N 39 01.4100, W 077 04.4200
+device_1,hi hi BAT 4.47  52.9<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   |||||||__
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   ||||||:__
+device_1,[0.3] MTU1-11>APCSS:=3901.41N\07704.33WShi hi BAT 4.47  77.4 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.3] MTU2-11>APCSS:=3901.42N\07704.43WShi hi BAT 0.00   0.0 <0x0a>
+device_1,N 39 01.4100, W 077 04.3300
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_0,N 39 01.4200, W 077 04.4300
+device_1,hi hi BAT 4.47  77.4<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(12/11)   [NONE]   ||||||___
+[0.2] MTU1-11>APCSS:=3901.41N\07704.35WShi hi BAT 4.47  80.8 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_0,MTU2-11 audio level = 35(10/11)   [NONE]   |||||____
+[0.2] MTU2-11>APCSS:=3901.42N\07704.43WShi hi BAT 0.00   0.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4100, W 077 04.3500
+hi hi BAT 4.47  80.8<0x20>
+device_0,N 39 01.4200, W 077 04.4300
+hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(12/11)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.41N\07704.35WShi hi BAT 4.47  53.7 <0x0a>
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.2] MTU2-11>APCSS:=3901.44N\07704.41WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4100, W 077 04.3500
+device_0,N 39 01.4400, W 077 04.4100
+device_1,hi hi BAT 4.47  53.7<0x20>
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(12/10)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.42N\07704.35WShi hi BAT 4.47 100.5 <0x0a>
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||____
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.2] MTU2-11>APCSS:=3901.44N\07704.41WShi hi BAT 0.00   0.0 <0x0a>
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4200, W 077 04.3500
+device_1,hi hi BAT 4.47 100.5<0x20>
+device_0,N 39 01.4400, W 077 04.4100
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_0,MTU2-11 audio level = 35(12/12)   [NONE]   |||||||__
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+[0.3] MTU1-11>APCSS:=3901.42N\07704.35WShi hi BAT 4.47  53.9 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+N 39 01.4200, W 077 04.3500
+device_0,[0.3] MTU2-11>APCSS:=3901.45N\07704.41WShi hi BAT 0.00   0.0 <0x0a>
+Position, Satellite/Pacsat, Cellular applications
+device_1,hi hi BAT 4.47  53.9<0x20>
+device_0,N 39 01.4500, W 077 04.4100
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(11/12)   [NONE]   |||||_|__
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||____
+device_1,[0.2] MTU1-11>APCSS:=3901.44N\07704.33WShi hi BAT 4.47  59.4 <0x0a>
+device_0,[0.2] MTU2-11>APCSS:=3901.45N\07704.41WShi hi BAT 0.00   0.0 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,N 39 01.4400, W 077 04.3300
+device_1,hi hi BAT 4.47  59.4<0x20>
+device_0,N 39 01.4500, W 077 04.4100
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_0,MTU2-11 audio level = 35(11/10)   [NONE]   |||||||__
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   ||||||___
+device_1,[0.2] MTU1-11>APCSS:=3901.44N\07704.33WShi hi BAT 4.47  51.7 <0x0a>
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.3] MTU2-11>APCSS:=3901.46N\07704.41WShi hi BAT 0.00   0.0 <0x0a>
+device_1,N 39 01.4400, W 077 04.3300
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,hi hi BAT 4.47  51.7<0x20>
+device_0,N 39 01.4600, W 077 04.4100
+device_0,hi hi BAT 0.00   0.0<0x20>
+device_1,MTU1-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,[0.3] MTU1-11>APCSS:=3901.42N\07704.34WShi hi BAT 4.47  81.9 <0x0a>
+device_0,MTU2-11 audio level = 35(11/11)   [NONE]   |||||||__
+device_1,Position, Satellite/Pacsat, Cellular applications
+device_0,[0.3] MTU2-11>APCSS:=3901.46N\07704.41WShi hi BAT 0.00   0.0 <0x0a>
+device_1,N 39 01.4200, W 077 04.3400
+device_0,Position, Satellite/Pacsat, Cellular applications
+device_1,hi hi BAT 4.47  81.9<0x20>
+device_0,N 39 01.4600, W 077 04.4100
+device_0,hi hi BAT 0.00   0.0<0x20>

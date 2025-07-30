@@ -93,6 +93,10 @@ CORS(app, resources={r"/get_data": {"origins": "*"}})
 def index():
     return render_template('index.html')
 
+@app.route('/Live_Status')
+def live_status():
+    return render_template('Live_Status.html') 
+
 @app.route('/Reaction_Wheels')
 def reaction_wheels():
     return render_template('Reaction_Wheels.html')

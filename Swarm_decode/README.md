@@ -1,49 +1,32 @@
 # Swarm decode
- This program allows to decode multiple
+This program enables decoding of multiple CubeSats simultaneously using RTL-SDR devices, loopback audio interfaces, and Direwolf for APRS demodulation.
+
+It also supports optional transmission of decoded data over the network and is designed to work on a Raspberry Pi-based Ground Station.
 
 
 
 # How to setup the Swarm communication mode
 The Swarm Communication
-# First install
-## Ground Station
+
+
+
+
+# I- First install
+## I.1- Ground Station
 
 ### Files
 on the desktop of the Raspberry Pi of the Ground Station
-**You should have a file named « swarm.desktop » **
-With the following contents:
+You should have a file named « swarm.desktop »
+You will be able to start the program by using this shortcut
 
-```
-[Desktop Entry]
-Version=1.0
-Name=Swarm Packet Decode using Direwolf
-GenericName=Decodes swarm packet using rtl_fm and Direwolf
-Comment=APRS signals
-Exec=/home/pi/CubeSatSim/groundstation/MTU_swarm/swarm_packet.sh
-Icon=/home/pi/Icons/aprs.png
-Terminal=true
-Type=Application
-Categories=Network;HamRadio;
-Keywords=APRS;ISS;
-```
-
-
-You will also need a program in /home/pi/CubeSatSim/groundstation/MTU_swarm
-This program is named: « swarm_packet.sh » 
-
-The contents are:
-
-### Serial number issue
-By default, all antennas come with the same serial number, which makes it difficult to use multiple units simultaneously.
-To identify each antenna, you can run:
-`rtl_test` 
-Then, to assign a unique serial number, plug in only one antenna at a time and run:
-`sudo rtl_eeprom -s NEW_SERIAL_NUMBER`
-
+You will also need to add in `/home/pi/CubeSatSim/groundstation/MTU_swarm/` the following files:
+`swarm_packet.sh`
+`swarm_packet_transmit.py`
+(Optional, in development) BPSK_decode.py – For future BPSK support
 
 ### Number of loop_back devices
 #### Setup ALSA Loopback for 4 Devices
-You need 4 loopback devices so Direwolf instances don’t clash on audio devices.
+You need (at least) 4 loopback devices so Direwolf instances don’t clash on audio devices.
 Modify /etc/modprobe.d/alsa-loopback.conf like this:
 `options snd-aloop enable=1,1,1,1 index=2,3,4,5 pcm_substreams=2,2,2,2`
 You might not have the permissions to change the configuration file directly so you can use:
@@ -58,6 +41,26 @@ sudo modprobe snd-aloop
 ```
 Check devices with:
 `aplay -l`
+
+## I.2- Webserver host
+This 
+### Files
+
+
+
+pc.py                        # Main server script
+templates/                  # Folder containing HTML pages
+└── index.html
+    Reaction_Wheels.html
+    Wifi_Communication.html
+    ...
+data/
+└── received_config.txt      # Created automatically
+└── data.txt                 # Created automatically
+
+
+
+
 
 
 ## Setting up the Cubesats
@@ -85,6 +88,7 @@ You can start the program by using
 
 
 # Troubleshooting
+## Executable files
 If you make changes to the program and if you get 
 `Invalid desktop entry file: '/home/pi/Desktop/swarm.desktop'`
 you should do
@@ -92,6 +96,13 @@ you should do
 chmod +x /home/pi/CubeSatSim/groundstation/MTU_swarm/swarm_packet.sh
 chmod +x /home/pi/Desktop/swarm.desktop
 ```
+## Serial number issue
+By default, all antennas come with the same serial number, which makes it difficult to use multiple units simultaneously.
+To identify each antenna, you can run:
+`rtl_test` 
+Then, to assign a unique serial number, plug in only one antenna at a time and run:
+`sudo rtl_eeprom -s NEW_SERIAL_NUMBER`
+Once you have defined a different serial number for all antennas it should work.
 
 
 

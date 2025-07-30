@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta charset="UTF-8" />
+  <title>Live Status - CubeSat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/CSS/style2.css">
+  <link rel="stylesheet" href="../static/CSS/home.css">
+  <link rel="stylesheet" href="../static/CSS/between.css">
+</head>
+<body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="/index" class="w3-bar-item w3-button"
+          ><b>CubeSat</b> Home</a
+        >
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+          <a href="#about" class="w3-bar-item w3-button">Author</a>
+        </div>
+      </div>
+    </div>
+  <h1>Realtime Status - CubeSats</h1>
+    <div class="container">
+      
+      <div class="column">
+        <div class="antenna-label">Antenna 1</div>
+        <img src="../static/IMAGE/antenna.png" alt="Antenna 1" style="height: 400px; user-select:none;" />
+        <img id="wave1" src="../static/IMAGE/wave-ok.png" alt="" />
+        <div class="sat-box" style="margin-top: 500px;" data-id="0">
+          <h2>CubeSat 1</h2>
+          <img src="../static/IMAGE/cubesat.png" alt="CubeSat 1" class="sat-img" />
+          <div class="data-section"></div>
+          <div class="more-data-section"></div>
+          <button class="see-more-btn">Show details</button>
+          <button class="more-details-btn">More details</button>
+          <button class="more-details-btn" id="more-details-btn-1">More details</button>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="antenna-label">Antenna 2</div>
+        <img src="../static/IMAGE/antenna.png" alt="Antenna 2" style="height: 400px; user-select:none;" />
+        <img id="wave2" src="../static/IMAGE/wave-ok.png" alt="" />
+        <div class="sat-box" style="margin-top: 500px;" data-id="0">
+          <h2>CubeSat 2</h2>
+          <img src="../static/IMAGE/cubesat.png" alt="CubeSat 2" class="sat-img" />
+          <div class="data-section"></div>
+          <div class="more-data-section"></div>
+          <button class="see-more-btn">Show details</button>
+          <button class="more-details-btn">More details</button>
+          <button class="more-details-btn" id="more-details-btn-2">More details</button>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="antenna-label">Antenna 3</div>
+        <img src="../static/IMAGE/antenna.png" alt="Antenna 3" style="height: 400px; user-select:none;" />
+        <img id="wave3" src="../static/IMAGE/wave-ok.png" alt="" />
+        <div class="sat-box" style="margin-top: 500px;" data-id="0">
+          <h2>CubeSat 3</h2>
+          <img src="../static/IMAGE/cubesat.png" alt="CubeSat 3" class="sat-img" />
+          <div class="data-section"></div>
+          <div class="more-data-section"></div>
+          <button class="see-more-btn">Show details</button>
+          <button class="more-details-btn">More details</button>
+          <button class="more-details-btn" id="more-details-btn-3">More details</button>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="antenna-label">Antenna 4</div>
+        <img src="../static/IMAGE/antenna.png" alt="Antenna 4" style="height: 400px; user-select:none;" />
+        <img id="wave4" src="../static/IMAGE/wave-ok.png" alt="" />
+        <div class="sat-box" style="margin-top: 500px;" data-id="0">
+          <h2>CubeSat 4</h2>
+          <img src="../static/IMAGE/cubesat.png" alt="CubeSat 4" class="sat-img" />
+          <div class="data-section"></div>
+          <div class="more-data-section"></div>
+          <button class="see-more-btn">Show details</button>
+          <button class="more-details-btn">More details</button>
+          <button class="more-details-btn" id="more-details-btn-4">More details</button>
+        </div>
+      </div>
+    </div>
+  <div id="overlay"></div>
+  <script src="{{ url_for('static', filename='JS/script_live_status.js') }}"></script>
+</body>
+</html>

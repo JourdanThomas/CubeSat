@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>CubeSat Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/CSS/style2.css">
+  <link rel="stylesheet" href="../static/CSS/home.css">
+  <link rel="stylesheet" href="../static/CSS/between.css">
+
+
+</head>
+<body>
+
+  <nav>
+    <button class="tab-btn active" data-target="Home">Home</button>
+    <button class="tab-btn" data-target="Live status">Live status</button>
+    <button class="tab-btn" data-target="Reaction wheels">Reaction wheels</button>
+    <button class="tab-btn" data-target="Communication between Cubesats">Communication between Cubesats</button>
+    <button class="tab-btn" onclick="window.location.href='/Visualisation';">Visualisation</button>
+
+  </nav>
+
+  <section id="Home" class="active">
+    <img src="../static/IMAGE/homeimage.png" alt="" class="homeimage" />
+    <h1>Welcome to MTU CubeSat Program</h1>
+    <p style="max-width: 600px; margin: auto; font-size:1.3rem; text-align:center;color: #004aad;">
+      Ready to discover the world of CubeSats ?
+    </p>
+          <div class="w3-container w3-padding-32" id="about">
+        <h3> About Cubesat </h3>
+        <p>
+          A CubeSat is a type of miniature cube-shaped satellite. They are used
+          for low-cost space missions, scientific research, technology
+          development, or educational purposes. CubeSats have standardized
+          sizes, typically measured in "U" units (1U, 2U, 3U, etc.), with each
+          unit being approximately 10x10x10 cm.
+        </p>
+        
+        <h3 style="margin-top: 100px;">
+          Nimbus Project
+        </h3>
+        <p>
+          Under the supervision and guidance of JUAN FRANCISCO MARTINEZ, a group
+          of trainees in the fields of electronics and computer science actively
+          joined a research project at the MTU research center, known as NIMBUS.
+          This internship experience at the NIMBUS center offers valuable
+          opportunities for these trainees to gain significant hands-on
+          experience and make meaningful contributions to technological
+          advancements within the research team.
+        </p>
+      </div>
+      <div class="interns-section">
+        <div class="our-projects">
+  <h2>Our Projects</h2>
+<div class="project-gallery">
+  <!-- Lien vers "Live status" -->
+  <a href="#Live status">
+    <img src="../static/IMAGE/icone1.png" alt="Project 1">
+  </a>
+
+  <!-- Lien vers "Reaction wheels" -->
+  <a href="#Reaction wheels">
+    <img src="../static/IMAGE/icone2.png" alt="Project 2">
+  </a>
+
+  <!-- Lien vers "Communication between Cubesats" -->
+  <a href="#Communication between Cubesats">
+    <img src="../static/IMAGE/icone3.png" alt="Project 3">
+  </a>
+
+</div>
+
+</div>
+
+  <h2>Who are we ?</h2>
+  <div class="interns-grid">
+<div class="intern-card">
+  <a href="https://www.nimbus.cit.ie/staff/juan-francisco-martinez/" target="_blank">
+    <img src="../static/IMAGE/juan-300x300.jpg" alt="Juan Francisco Martinez" />
+  </a>
+  <h3>Juan Francisco Martinez</h3>
+  <p>Research Fellow & Group Lead<br>
+  Juan is the supervisor of the Cubesat project, with over 15 years of experience in the field of electronics and more than 100 projects completed at various levels...</p>
+</div>
+
+
+<div class="intern-card">
+  <a href="https://www.linkedin.com/in/thomas-jourdan-inge/" target="_blank">
+    <img src="../static/IMAGE/tjourdan.jpeg" alt="Thomas Jourdan" />
+  </a>
+  <h3>Thomas Jourdan</h3>
+  <p>Intern – Mines Saint-Etienne (Summer 2025)<br>
+  Specialization: Aerospace and Microelectronics / Embedded Systems Engineering<br>
+  Duration: 3 months</p>
+</div>
+
+
+<div class="intern-card">
+  <a href="https://fr.linkedin.com/in/m%E2%80%99hamed-chetouane-52a8b52a5" target="_blank">
+    <img src="../static/IMAGE/mchetouane.jpg" alt="M'hamed Chetouane" />
+  </a>
+  <h3>M'hamed Chetouane</h3>
+  <p>Intern – Mines Saint-Etinne (Summer 2025)<br>
+  Specialization: Aerospace and Mechanical Engineering<br>
+  Duration: 3 months</p>
+</div>
+
+  </div>
+</div>
+<div class="footer-section">
+  <img src="../static/IMAGE/maxresdefault.jpg" alt="MTU Research Institute" class="footer-image" />
+
+<div class="school-logos">
+  <a href="https://www.nimbus.cit.ie/" target="_blank">
+    <img src="../static/IMAGE/Nimbus1.jpg" alt="Nimbus Centre" />
+  </a>
+  <a href="https://www.mtu.ie/" target="_blank">
+    <img src="../static/IMAGE/logo_MTU.JPG" alt="MTU" />
+  </a>
+  <a href="https://www.mines-stetienne.fr/" target="_blank">
+    <img src="../static/IMAGE/emselogopng.png" alt="Mines Saint-Étienne" />
+  </a>
+</div>
+
+
+</div>
+  </section>
+
+  <section id="Live status">
+
+    <h1>Realtime Status - CubeSats</h1>
+    <div class="container">
+      
+      <div class="column">
+        <div class="antenna-label">Antenna 1</div>
+        <img src="../static/IMAGE/antenna.png" alt="Antenna 1" style="height: 400px; user-select:none;" />
+        <img id="wave1" src="../static/IMAGE/wave-ok.png" alt="" />
+        <div class="sat-box" style="margin-top: 500px;" data-id="0">
+          <h2>CubeSat 1</h2>
+          <img src="../static/IMAGE/cubesat.png" alt="CubeSat 1" class="sat-img" />
+          <div class="data-section"></div>
+          <div class="more-data-section"></div>
+          <button class="see-more-btn">Show details</button>
+          <button class="more-details-btn">More details</button>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="antenna-label">Antenna 2</div>
+        <img src="../static/IMAGE/antenna.png" alt="Antenna 2" style="height: 400px; user-select:none;" />
+        <img id="wave2" src="../static/IMAGE/wave-ok.png" alt="" />
+        <div class="sat-box" style="margin-top: 500px;" data-id="0">
+          <h2>CubeSat 2</h2>
+          <img src="../static/IMAGE/cubesat.png" alt="CubeSat 2" class="sat-img" />
+          <div class="data-section"></div>
+          <div class="more-data-section"></div>
+          <button class="see-more-btn">Show details</button>
+          <button class="more-details-btn">More details</button>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="antenna-label">Antenna 3</div>
+        <img src="../static/IMAGE/antenna.png" alt="Antenna 3" style="height: 400px; user-select:none;" />
+        <img id="wave3" src="../static/IMAGE/wave-ok.png" alt="" />
+        <div class="sat-box" style="margin-top: 500px;" data-id="0">
+          <h2>CubeSat 3</h2>
+          <img src="../static/IMAGE/cubesat.png" alt="CubeSat 3" class="sat-img" />
+          <div class="data-section"></div>
+          <div class="more-data-section"></div>
+          <button class="see-more-btn">Show details</button>
+          <button class="more-details-btn">More details</button>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="antenna-label">Antenna 4</div>
+        <img src="../static/IMAGE/antenna.png" alt="Antenna 4" style="height: 400px; user-select:none;" />
+        <img id="wave4" src="../static/IMAGE/wave-ok.png" alt="" />
+        <div class="sat-box" style="margin-top: 500px;" data-id="0">
+          <h2>CubeSat 4</h2>
+          <img src="../static/IMAGE/cubesat.png" alt="CubeSat 4" class="sat-img" />
+          <div class="data-section"></div>
+          <div class="more-data-section"></div>
+          <button class="see-more-btn">Show details</button>
+          <button class="more-details-btn">More details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="Reaction wheels" style="display:none;">
+
+  </section>
+
+  <section id="Communication between Cubesats" style="display:none;">
+    <img src="../static/IMAGE/illustration1.jpg" alt="Communication Illustration" />
+    <div class="communication-line">
+      <img src="../static/IMAGE/cubesat.png" alt="CubeSat" class="comm-cubesat" />
+      <img src="../static/IMAGE/wave-ok.png" alt="Onde" class="comm-wave" />
+      <img src="../static/IMAGE/cubesat.png" alt="CubeSat" class="comm-cubesat" />
+      <img src="../static/IMAGE/wave-ok.png" alt="Onde" class="comm-wave" />
+      <img src="../static/IMAGE/cubesat.png" alt="CubeSat" class="comm-cubesat" />
+      <img src="../static/IMAGE/wave-ok.png" alt="Onde" class="comm-wave" />
+      <img src="../static/IMAGE/cubesat.png" alt="CubeSat" class="comm-cubesat" />
+      <img src="../static/IMAGE/wave-ok.png" alt="Onde" class="comm-wave" />
+      <img src="../static/IMAGE/antenna.png" alt="Antenne" class="comm-antenna" />
+    </div>
+  
+  </section>
+
+<section id="Visualisation" style="display:none;">
+  <h1>Visualisation</h1>
+  <div class="Visualisation-content">
+    <!-- Ici tu pourras insérer des graphiques, des cartes, etc. -->
+    <p>
+      Ici vous pourrez visualiser des données satellites en temps réel, des courbes, des trajectoires, etc.
+    </p>
+    <!-- Ex : zone pour un graphique (tu peux utiliser Chart.js, D3.js, etc) -->
+    <canvas id="Visualisation-chart" width="600" height="400"></canvas>
+  </div>
+</section>
+
+  <!-- Overlay sombre -->
+  <div id="overlay"></div>
+
+<script src="../static/JS/script2.js"></script>
+<script src="../static/JS/script_live_status.js"></script>
+<script src="../static/JS/script_between.js"></script>
+
+
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const target = this.getAttribute('href').substring(1);
+
+      // Simule un clic sur le bouton correspondant
+      const tabBtn = [...document.querySelectorAll('.tab-btn')]
+        .find(btn => btn.dataset.target === target);
+
+      if (tabBtn) tabBtn.click();
+    });
+  });
+</script>
+
+</body>
+</html>
