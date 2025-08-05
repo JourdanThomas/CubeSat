@@ -26,7 +26,7 @@ For each of these separate projects, you'll find dedicated folders containing al
 - **Web_Serveur:** Contains all the files necessary to visualize various web pages related to the Cubesat, including the work done by other group members.
 - **Swarm_decode**  Contains all the file to receive and decode RF signals from multiple CubeSats and how to display it on a web-server.
 - **Module3_Camera_support**: Allows the CubeSat to support raspberry pi module 3 cameras such as a the NoIR cameras. By default it only supports module 2.
-
+- **Distributed computing**: Work in progress for the development of a distributed computing network for image processing
 
 Please refer to individual folders for specific details and resources related to each stage of the project.
 
