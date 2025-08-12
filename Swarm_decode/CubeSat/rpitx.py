@@ -99,8 +99,11 @@ if __name__ == "__main__":
 #		if (len(sys.argv)) > 1:
 #        		print("There are arguments!")
 		if (mode == 'a'):
-			print("AFSK")
+			print("APRS")
 			sleep(5)
+			# Start listening for additional data on port 8080
+			system("sudo nc -l 8080 > /home/pi/CubeSatSim/nc_data.txt &")
+			print("Listening for additional data on port 8080...")
 			try:
 				file = open("/home/pi/CubeSatSim/t.txt")
 				file.close()
@@ -119,10 +122,40 @@ if __name__ == "__main__":
 				try:
 					f = open("/home/pi/CubeSatSim/ready")
 					output(txLed, txLedOn)
-					if (debug_mode == 1):
-						system("gen_packets -o /home/pi/CubeSatSim/telem.wav /home/pi/CubeSatSim/t.txt -r 48000 > /dev/null 2>&1 && cat /home/pi/CubeSatSim/telem.wav | csdr convert_i16_f | csdr gain_ff 7000 | csdr convert_f_samplerf 20833 | sudo /home/pi/rpitx/rpitx -i- -m RF -f 434.9e3")
-					else:
-						system("gen_packets -o /home/pi/CubeSatSim/telem.wav /home/pi/CubeSatSim/t.txt -r 48000 > /dev/null 2>&1 && cat /home/pi/CubeSatSim/telem.wav | csdr convert_i16_f | csdr gain_ff 7000 | csdr convert_f_samplerf 20833 | sudo /home/pi/rpitx/rpitx -i- -m RF -f 434.9e3 > /dev/null 2>&1")
+					# Check if additional data has arrived via nc and concatenate it
+					try:
+						import os
+						if os.path.getsize("/home/pi/CubeSatSim/nc_data.txt") > 0:
+							# Read the original telemetry data
+							with open("/home/pi/CubeSatSim/t.txt", "r") as f_orig:
+								original_data = f_orig.read().strip()
+							# Read the nc data
+							with open("/home/pi/CubeSatSim/nc_data.txt", "r") as f_nc:
+								nc_data = f_nc.read().strip()
+							# Create combined message
+							combined_data = original_data + " " + nc_data
+							# Write combined data to a temporary file
+							with open("/home/pi/CubeSatSim/combined.txt", "w") as f_combined:
+								f_combined.write(combined_data)
+							# Transmit combined data
+							if (debug_mode == 1):
+								system("gen_packets -o /home/pi/CubeSatSim/telem.wav /home/pi/CubeSatSim/combined.txt -r 48000 > /dev/null 2>&1 && cat /home/pi/CubeSatSim/telem.wav | csdr convert_i16_f | csdr gain_ff 7000 | csdr convert_f_samplerf 20833 | sudo /home/pi/rpitx/rpitx -i- -m RF -f 434.9e3")
+							else:
+								system("gen_packets -o /home/pi/CubeSatSim/telem.wav /home/pi/CubeSatSim/combined.txt -r 48000 > /dev/null 2>&1 && cat /home/pi/CubeSatSim/telem.wav | csdr convert_i16_f | csdr gain_ff 7000 | csdr convert_f_samplerf 20833 | sudo /home/pi/rpitx/rpitx -i- -m RF -f 434.9e3 > /dev/null 2>&1")
+							# Clear the nc data file after transmission
+							system("echo '' > /home/pi/CubeSatSim/nc_data.txt")
+						else:
+							# No nc data, transmit original telemetry
+							if (debug_mode == 1):
+								system("gen_packets -o /home/pi/CubeSatSim/telem.wav /home/pi/CubeSatSim/t.txt -r 48000 > /dev/null 2>&1 && cat /home/pi/CubeSatSim/telem.wav | csdr convert_i16_f | csdr gain_ff 7000 | csdr convert_f_samplerf 20833 | sudo /home/pi/rpitx/rpitx -i- -m RF -f 434.9e3")
+							else:
+								system("gen_packets -o /home/pi/CubeSatSim/telem.wav /home/pi/CubeSatSim/t.txt -r 48000 > /dev/null 2>&1 && cat /home/pi/CubeSatSim/telem.wav | csdr convert_i16_f | csdr gain_ff 7000 | csdr convert_f_samplerf 20833 | sudo /home/pi/rpitx/rpitx -i- -m RF -f 434.9e3 > /dev/null 2>&1")
+					except:
+						# Fallback to original telemetry if concatenation fails
+						if (debug_mode == 1):
+							system("gen_packets -o /home/pi/CubeSatSim/telem.wav /home/pi/CubeSatSim/t.txt -r 48000 > /dev/null 2>&1 && cat /home/pi/CubeSatSim/telem.wav | csdr convert_i16_f | csdr gain_ff 7000 | csdr convert_f_samplerf 20833 | sudo /home/pi/rpitx/rpitx -i- -m RF -f 434.9e3")
+						else:
+							system("gen_packets -o /home/pi/CubeSatSim/telem.wav /home/pi/CubeSatSim/t.txt -r 48000 > /dev/null 2>&1 && cat /home/pi/CubeSatSim/telem.wav | csdr convert_i16_f | csdr gain_ff 7000 | csdr convert_f_samplerf 20833 | sudo /home/pi/rpitx/rpitx -i- -m RF -f 434.9e3 > /dev/null 2>&1")
 					output(txLed, txLedOff)
 					f.close()
 					system("sudo rm /home/pi/CubeSatSim/ready")
@@ -249,6 +282,7 @@ if __name__ == "__main__":
 				sleep(0.5)
 				output(txLed, txLedOn)
 				sleep(4.0)
+
 		else:
 			print("FSK") 
 			system("sudo nc -l 8080 | csdr convert_i16_f | csdr gain_ff 7000 | csdr convert_f_samplerf 20833 | sudo /home/pi/rpitx/rpitx -i- -m RF -f 434.9e3 &")
