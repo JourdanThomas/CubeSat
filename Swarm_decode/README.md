@@ -15,10 +15,13 @@ You should have a file named « swarm.desktop »
 You will be able to start the program by using this shortcut
 
 Place the following files in:
+```
 /home/pi/CubeSatSim/groundstation/MTU_swarm/
 ├── swarm_packet.sh
 ├── swarm_packet_transmit.py
 └── (optional) BPSK_decode.py
+
+```
 
 
 ### Configure ALSA Loopback Devices
@@ -119,11 +122,12 @@ Once you have defined a different serial number for all antennas it should work.
 # IV - Web Interface Endpoints
 After launching pc.py, access the server in a browser via the displayed IP.
 Available routes:
-/index, /Live_Status, etc. – Visual interfaces
-/get_data – JSON dump of all recent data
-/get_device_data/<id> – Data from a specific CubeSat
-/get_config – Current configuration
-/get_status – System diagnostics
+
+- /index, /Live_Status, etc. – Visual interfaces
+- /get_data – JSON dump of all recent data
+- /get_device_data/<id> – Data from a specific Frequency/CubeSat
+- /get_config – Current configuration
+- /get_status – System diagnostics
 
 You can find more explanations in this repo in the `pictures` folder
 You can find examples of a config file and the log files in the `example` folder
