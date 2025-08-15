@@ -1,3 +1,11 @@
+#######################################################
+# MTU   master_hub.py
+# This program starts the master hub for the CubeSat distributed computing project.
+# It handles the communication between the master hub and the Raspberry Pi nodes, it distributes tasks to the other Cubesats
+#######################################################
+# made by Thomas Jourdan
+# 08/2025
+#######################################################
 import subprocess
 from scapy.all import ARP, Ether, srp
 import time
@@ -14,7 +22,7 @@ RASPBERRY_MAC_PREFIXES = [
 ]
 
 # Hotspot settings
-HOTSPOT_IFACE = "wlan1"
+HOTSPOT_IFACE = "wlan1" # wlan1 for the USB dongle and wlan0 for built-in wifi (test with )
 HOTSPOT_SSID = "Master_CubeSat"
 HOTSPOT_PASSWORD = "raspberry"
 SUBNET = "192.168.50.1/24"  # Adjust if different
@@ -88,6 +96,7 @@ def scan_for_raspberry_pis(ip_range=SUBNET):
 
 def handle_client_connection(client_socket, address):
     """Handle individual client connections for distributed computing tasks"""
+
     print(f"New connection from {address}")
     
     try:
@@ -116,6 +125,7 @@ def handle_client_connection(client_socket, address):
 
 def start_computing_server():
     """Start the distributed computing server"""
+
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     
@@ -153,6 +163,8 @@ def add_computing_task(task_type, data):
     return task_id
 
 
+
+
 if __name__ == "__main__":
     print("=== Master CubeSat Distributed Computing Hub ===")
     
@@ -168,11 +180,19 @@ if __name__ == "__main__":
     print("Waiting for devices to connect...")
     time.sleep(10)
     
+
+
+
     # Add some sample computing tasks
     add_computing_task("prime_check", {"number": 123456789})
     add_computing_task("fibonacci", {"n": 1000})
     add_computing_task("matrix_multiply", {"size": 100})
 
+
+
+
+
+    
     while True:
         devices = scan_for_raspberry_pis()
         

@@ -6,7 +6,7 @@
 ## This script sets up a Flask web server to serve data from the ground station,
 # allowing users to view data from multiple devices.
 #######################################################
-# made by Thomas Jourdan and M'hamed Chetouane
+# made by Thomas Jourdan
 # 07/2025
 #######################################################
 

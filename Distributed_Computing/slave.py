@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""
-Slave Raspberry Pi for Distributed Computing
-Automatically connects to master hotspot and processes computing tasks
-"""
+#######################################################
+# MTU   slave.py
+# This program starts the slave program for the CubeSat distributed computing project.
+# It connects to the master hub and processes tasks assigned to it.
+#######################################################
+# made by Thomas Jourdan
+# 08/2025
+#######################################################
 
 import subprocess
 import time
@@ -20,7 +24,8 @@ MASTER_IP = "192.168.50.1"
 MASTER_PORT = 5000
 
 # Network interface
-WIFI_INTERFACE = "wlan0"
+WIFI_INTERFACE = "wlan0" # wlan0 for built-in wifi and wlan1 for USB dongle
+
 
 # Connection retry settings
 MAX_RETRIES = 5
@@ -214,7 +219,12 @@ network={{
                 "slave_id": self.get_slave_id(),
                 "timestamp": time.time()
             }
-            
+    
+    ##########################################
+    # Task processing methods
+    # you can add new methods here if you want to do different tasks
+    ##########################################
+
     def check_prime(self, n):
         """Check if a number is prime"""
         if n < 2:
@@ -242,7 +252,7 @@ network={{
         return b
         
     def matrix_multiply(self, size):
-        """Simple matrix multiplication for benchmarking"""
+        """Simple random matrix multiplication for benchmarking"""
         import random
         
         # Create random matrices
@@ -257,6 +267,10 @@ network={{
                     result[i][j] += matrix_a[i][k] * matrix_b[k][j]
                     
         return {"size": size, "completed": True}
+    
+
+    ##########################################
+    ##########################################
         
     def get_slave_id(self):
         """Get unique slave identifier"""

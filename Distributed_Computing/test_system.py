@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
-"""
-Test script for CubeSat Distributed Computing System
-Tests individual components without requiring full network setup
-"""
+#######################################################
+# MTU   test_system.py
+# Test script for CubeSat Distributed Computing System
+# Tests individual components without requiring full network setup
+#######################################################
+# made by Thomas Jourdan
+# 08/2025
+#######################################################
+
 
 import time
 import json

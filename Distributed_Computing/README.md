@@ -1,4 +1,5 @@
 # CubeSat Distributed Computing Project
+MTU 08/2025 made by Thomas Jourdan
 
 A distributed computing system using Raspberry Pi devices with automatic WiFi hotspot connection and task distribution.
 
@@ -26,7 +27,7 @@ This project implements a master-slave distributed computing architecture where:
 ### Slave Devices
 - Raspberry Pi zero 
 - Power supply
-- MicroSD card
+
 
 ## Software Requirements
 
@@ -192,45 +193,4 @@ nmcli device status
 - Check WiFi signal strength
 - Verify network interface stability
 
-### Debug Mode
-Enable verbose logging by modifying the log level in both scripts.
-
-## Security Considerations
-
-- **WiFi Password**: Change default password in production
-- **Network Isolation**: Consider VLANs for production use
-- **Access Control**: Implement authentication for slave devices
-- **Encryption**: Use WPA3 when possible
-
-## Performance Optimization
-
-### Task Distribution
-- Implement load balancing based on device capabilities
-- Add task priority queues
-- Implement task result caching
-
-### Network Optimization
-- Use UDP for high-frequency communications
-- Implement connection pooling
-- Add network quality monitoring
-
-## Monitoring and Logging
-
-### Master Device Logs
-- Device connection/disconnection events
-- Task distribution and completion
-- Network status and performance metrics
-
-### Slave Device Logs
-- Connection attempts and status
-- Task processing progress
-- Error conditions and recovery
-
-## Future Enhancements
-
-- **Web Dashboard**: Real-time monitoring interface
-- **Task Scheduling**: Advanced task queuing and scheduling
-- **Load Balancing**: Dynamic task distribution based on device load
-- **Fault Recovery**: Automatic task redistribution on device failure
-- **Scalability**: Support for larger device networks
 
