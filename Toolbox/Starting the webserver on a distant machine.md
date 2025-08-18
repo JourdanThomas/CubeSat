@@ -61,6 +61,7 @@ Manually pull updates
 ```bash
 cd ~/CubeSat
 git pull origin main
+cd..
 
 ```
 Update automatically using a cron job
@@ -87,7 +88,6 @@ Edit crontab:
 ```
 crontab -e
 ```
-
 Add the line to launch the web server at startup:
 ```
 @reboot cd /home/cubesatlab/CubeSat/Swarm_decode/Web_Serveur && nohup python3 app.py &
@@ -95,6 +95,8 @@ Add the line to launch the web server at startup:
 - @reboot → runs the script at machine startup.
 - nohup → allows it to keep running after logout.
 - & → runs it in the background.
+
+## Automatically stop and restart the web server
 
 
 

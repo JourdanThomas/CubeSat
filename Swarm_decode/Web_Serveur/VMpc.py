@@ -38,7 +38,7 @@ def get_local_ip():
         s.close()
     return ip
 
-pc_ip =''   # IP address of the Wi-Fi shared with the Raspberry Pi
+pc_ip ='172.31.1.13'   # IP address of the Wi-Fi shared with the Raspberry Pi
 pc_port = 7000
 
 # Configuration for receiving data
@@ -52,7 +52,7 @@ config_file = '/Users/thomasjourdan/Documents/GitHub/CubeSat/Swarm_decode/data/r
 
 ascii_art = """  ____      _          ____        _   ____  _
  / ___|   _| |__   ___/ ___|  __ _| |_/ ___|(_)_ __ ___
-| |  | | | | '_ \ / _ \___ \ / _` | __\___ \| | '_ ` _ \\
+| |  | | | | '_ \ / _ \___ \ / _` | __\___ \| | '_ ` _ \ \
 | |__| |_| | |_) |  __/___) | (_| | |_ ___) | | | | | | |
 \____\__,_|_.__/ \___|____/ \__,_|\__|____/|_|_| |_| |_|
 \ \      / /__| |__    ___  ___ _ ____   _____ _ __
