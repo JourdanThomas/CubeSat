@@ -38,7 +38,7 @@ def get_local_ip():
         s.close()
     return ip
 
-pc_ip ='10.10.10.5'   # IP address of the Wi-Fi shared with the Raspberry Pi
+pc_ip ='172.31.1.13'   # IP address of the Wi-Fi shared with the Raspberry Pi
 pc_port = 7000
 
 # Configuration for receiving data
@@ -48,7 +48,7 @@ device_count = 0  # Will be set when config is received
 data_receivers = {}  # Dictionary to store data from each device
 
 # Configuration file path (will be created when received)
-config_file = '/Users/thomasjourdan/Documents/GitHub/CubeSat/Swarm_decode/data/received_config.txt'
+config_file = '/CubeSat/Swarm_decode/data/received_config.txt'
 
 ascii_art = """  ____      _          ____        _   ____  _
  / ___|   _| |__   ___/ ___|  __ _| |_/ ___|(_)_ __ ___
@@ -69,7 +69,7 @@ print("the PC port is:",pc_port)
 print("")
 
 # Location of the text file where you want to save the data
-output_file = '/Users/thomasjourdan/Documents/GitHub/CubeSat/Swarm_decode/data/data.txt'
+output_file = '/CubeSat/Swarm_decode/data/data.txt'
 
 # Create data directory if it doesn't exist
 os.makedirs(os.path.dirname(output_file), exist_ok=True)
