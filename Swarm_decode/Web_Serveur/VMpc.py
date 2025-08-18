@@ -38,7 +38,7 @@ def get_local_ip():
         s.close()
     return ip
 
-pc_ip ='172.19.0.1'   # IP address of the Wi-Fi shared with the Raspberry Pi
+pc_ip ='10.10.1.5'   # IP address of the Wi-Fi shared with the Raspberry Pi
 pc_port = 7000
 
 # Configuration for receiving data
