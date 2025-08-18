@@ -37,7 +37,7 @@ def get_local_ip():
     return ip
 
 pc_ip = get_local_ip()   # IP address of the Wi-Fi shared with the Raspberry Pi
-pc_port = 8080
+pc_port = 7000
 
 # Configuration for receiving data
 config_port = 5000
