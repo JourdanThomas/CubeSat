@@ -196,5 +196,5 @@ if __name__ == '__main__':
 
     # Start the thread
     receive_thread.start()
-    app.run(host='0.0.0.0', port=8080)  # Run the Flask server on all PC interfaces
+    app.run(host='0.0.0.0', port=pc_port)  # Run the Flask server on all PC interfaces
 

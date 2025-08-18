@@ -61,7 +61,7 @@ Manually pull updates
 ```bash
 cd ~/CubeSat
 git pull origin main
-cd..
+cd ..
 
 ```
 Update automatically using a cron job
